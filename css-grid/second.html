@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            ;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(60, 60, 60);
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #0091ff;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 39.5% 30% 29%;
+            grid-template-rows: auto 37% 30% 20% auto;
+
+        }
+
+        .grid-item {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: left;
+            font-size: 50px;
+            background-color: #0091ff;
+            grid-column: 1/ span 1;
+            grid-row: 2;
+        }
+
+        .navmenu {
+            background-color: rgb(60, 60, 60);
+        }
+
+        .main-image {
+            padding: 0%;
+            background-color: white;
+            grid-column: 2/ span 2;
+            grid-row: 2;
+        }
+
+        .main1 {
+            padding: 0%;
+            grid-column: 1 / span 2;
+            grid-row: 3;
+        }
+
+        .main2 {
+            grid-column: 1 /span 3;
+            grid-row: 5;
+        }
+
+        .sidenav {
+            grid-column: 3;
+            grid-row: 3/ span 1;
+        }
+
+        .supportsection1 {
+            grid-column: 1;
+            grid-row: 4/ span 1;
+            background-color: rgb(220, 220, 220);
+            color: rgb(0, 0, 0);
+        }
+
+        .supportsection2 {
+            grid-column: 2/ span 2;
+            grid-row: 4;
+            background-color: rgb(0, 0, 0);
+        }
+
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item navmenu">
+
+            <ul>
+                <li><a href="index.html ">Home</a></li>
+                <li><a href="second.html ">Second Page</a></li>
+            </ul>
+        </div>
+        <div class="grid-item header">
+            <img src="images/porsche.png" alt="porsche" width="15%" height="20%">
+            <h1>Guntherwerks</h1>
+            <p style="font-size: 25px;">Porsche 911® remastered by Gunther Werks are modern high-performance, bespoke
+                vehicles that pay homage to the naturally aspirated vehicles of a quarter-century ago.</p>
+        </div>
+        <div class="grid-item main-image">
+            <img src="images/IMG_8898.jpg" alt="tornadorear" width="100%" height="auto">
+        </div>
+        <div class="grid-item main1">
+            <img src="images/interior.jpg" alt="interior" width="100%" height="auto">
+        </div>
+        <div class="grid-item main2">Located in Huntington Beach, CA</div>
+        <div style="background-color: rgb(255, 217, 0); color: black;" class="grid-item sidenav">
+            <h1>Porsche 911 Restomod</h1>
+        </div>
+        <div class="grid-item supportsection1">
+            <p style="font-size: 21px; text-align: left;">In the cockpit, Gunther Werks creates a balance between the
+                original interior
+                and newly designed
+                luxurious cabin elements. It embraces the DNA of the original design while respectfully remastering it.
+                Carbon fiber bucket seats, floor panels and rear-seat deletes are integral to the transformation.
+                Clients control the customization of the interior with Alcantara, carbon fiber and billet aluminum
+                accents.
+
+                These vehicles are truly bespoke with both the silhouette and soul of a classic. Only a fortunate few
+                are destined to own one.
+            </p>
+        </div>
+        <div class="grid-item supportsection2">
+            <h3>CONTACT</h3>
+            <ol>
+                <a>GENERAL
+                    info@guntherwerks.com</a>
+                <br>
+                <a>PRESS
+                    press@guntherwerks.com</a>
+                <br>
+                <a> SALES
+                    sales@guntherwerks.com</a>
+            </ol>
+        </div>
+    </div>
+    <div class="footer">
+        Created by &copy; Evan @ Guntherwerks&#128517;
+    </div>
+
+</body>
+
+</html>
