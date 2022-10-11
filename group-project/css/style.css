@@ -4,6 +4,7 @@
     width: 200px;
     background-color: #000000;
     position: fixed;
+    float: right;
     height: 100%;
     overflow: auto;
     font-family: sans-serif;
@@ -32,7 +33,7 @@
     .sidebar {
         width: 100%;
         height: auto;
-        position: relative;
+        position: right;
     }
 
     .sidebar a {
@@ -52,6 +53,8 @@
 }
 
 footer {
+    font-family: sans-serif;
+    font-size: 20px;
     text-align: center;
     padding: 3px;
     background-color: rgb(255, 0, 0);
