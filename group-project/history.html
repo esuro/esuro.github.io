@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The History of Dinosaurs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: auto auto auto;
+        }
+
+        .grid-item {
+            background-color: lightgray;
+            text-align: center;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        .sidebar {
+            grid-column: 3;
+            grid-row: 3 / span 3;
+            background-color: dimgray;
+            color: white;
+
+        }
+
+        .header {}
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="sidebar">
+            <a class="active" href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="economy.html">Economy</a>
+            <a href="social-media.html">Social Media</a>
+
+
+        </div>
+        <div class="grid-item header">
+            <h1>The History of Dinosaurs</h1>
+        </div>
+        <div class="grid-item main-content">
+
+        </div>
+
+    </div>
+    <footer>
+        <p>Alex, Darius, Evan, Soren (copyright)<br>
+            <a href="mailto:email@example.com">email@example.com</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
