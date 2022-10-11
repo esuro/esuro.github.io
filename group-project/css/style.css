@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #08103d;
+    background-color: #000000;
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -18,12 +18,12 @@
 }
 
 .sidebar a.active {
-    background-color: #000000;
-    color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
 }
 
 .sidebar a:hover:not(.active) {
-    background-color: rgb(13, 64, 147);
+    background-color: rgb(255, 0, 0);
     color: white;
 }
 
@@ -36,11 +36,11 @@
     }
 
     .sidebar a {
-        float: left;
+        float: right;
     }
 
     div.content {
-        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -49,4 +49,11 @@
         text-align: center;
         float: none;
     }
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(255, 0, 0);
+    color: white;
 }
