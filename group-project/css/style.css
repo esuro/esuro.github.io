@@ -57,11 +57,7 @@ footer {
     background-color: rgb(255, 0, 0);
     color: white;
     position: fixed;
-<<<<<<< HEAD
     left: 0;
-=======
-    left: 500;
->>>>>>> 043504de571edfa4aa384bd5e748180c17107852
     bottom: 0;
     width: 100%;
 }
