@@ -3,8 +3,7 @@
     padding: 0;
     width: 200px;
     background-color: #000000;
-    /*position: fixed;
-    float: right;*/
+    float: right;
     height: 100%;
     overflow: auto;
     font-family: sans-serif;
