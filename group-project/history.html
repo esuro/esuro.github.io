@@ -21,9 +21,13 @@
             padding: 10px;
         }
 
+        .sidenav {
+            grid-column: 3;
+            grid-row: 1 / span 3;
+        }
 
         .header {
-            grid-column: 1 / span 3;
+            grid-column: 1 / span 2;
             grid-row: 1;
         }
 
@@ -67,7 +71,7 @@
 
 <body>
     <div class="grid-container">
-        <div class="sidebar">
+        <div class="sidenav sidebar">
             <a class="active" href="index.html">Home</a>
             <a href="about-us.html">About Us</a>
             <a href="economy.html">Economy</a>
@@ -79,7 +83,6 @@
         </div>
         <div style="padding-left: 220px;" class="grid-item header ">
             <h1>The History of Dinosaurs</h1>
-            <h2>The jurassic era:</h2>
         </div>
         <div class="grid-item triassic-time ">
             Triassic Period: 248-213 million years ago

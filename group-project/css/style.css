@@ -3,8 +3,8 @@
     padding: 0;
     width: 200px;
     background-color: #000000;
-    position: fixed;
-    float: right;
+    /*position: fixed;
+    float: right;*/
     height: 100%;
     overflow: auto;
     font-family: sans-serif;
@@ -34,9 +34,11 @@
         height: auto;
         position: right;
     }
+
     .sidebar a {
         float: right;
     }
+
     div.content {
         margin-right: 0;
     }
