@@ -8,71 +8,94 @@
     <title>Social Media</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .background {
-            background-color: rgb(255, 255, 255);
-            padding-bottom: 100px;
-        }
-
         .grid-container {
             display: grid;
-            gap: 50px 100px;
-            text-align: center;
-            grid-template-columns: auto auto auto;
+            gap: 10px;
+            grid-template-columns: 42.5% 42.5% auto;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: crimson;
+            font-size: 50px;
+        }
+
+        .main-image {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            width: 122%;
+            height: 105%;
+            margin-left: -225px;
+            margin-top: -10px;
+            /*NEW FEATURE*/
+            opacity: 0.2;
+            /*NEW FEATURE*/
+        }
+
+        .sidebar {
+            grid-column: 3;
+            grid-row: 1 / span 3;
         }
 
         .grid-item {
-            background-color: #3d89B3;
+            background-color: lightgrey;
             font-size: 30px;
             padding: 10px;
         }
 
-        .navmenu {
-            grid-column: 1 / span 3;
-            grid-row: 1;
-        }
-
-        .main-image {
-            grid-column: 1 / span 3;
-            grid-row: 0 / span 2;
-        }
-
-        .main-1 {
+        .header {
             grid-column: 1 / span 2;
+            grid-row: 1;
+            position: relative;
+            text-align: center;
+            color: #3D89B3;
+        }
+
+        .title {
+            font-size: 20px;
+            grid-column: 1 / span 2;
+            grid-row: 2;
+            text-align: center;
+            height: 70%;
+            color: #3D89B3;
+        }
+
+        .content1 {
+            font-size: 20px;
+            grid-column: 1;
             grid-row: 3;
         }
 
-        .support-1 {
-            background-color: rgb(38, 253, 242);
-            grid-column: 1;
-            grid-row: 4;
-            padding-right: 25px;
-        }
-
-        .support-2 {
-            background-color: rgb(51, 216, 238);
+        .content2 {
+            font-size: 20px;
             grid-column: 2;
-            grid-row: 4;
+            grid-row: 3;
         }
 
-        .main-2 {
+        .title2 {
+            font-size: 20px;
             grid-column: 1 / span 2;
-            grid-row: 5;
+            grid-row: 4;
+            text-align: center;
+            height: 70%;
+            color: #3D89B3;
+        }
+
+        .content3 {
+            grid-column: 1;
+        }
+
+        .content4 {
+            grid-column: 2;
         }
 
         .sidenav {
             grid-column: 3;
             grid-row: 3 / span 1;
             background-color: azure;
-        }
-
-        .main-image {
-            grid-column: 1 / span 2;
-            grid-row: 1;
-            margin-left: 10px;
-            margin-top: 10px;
-            /*NEW FEATURE*/
-            opacity: 0.5;
-            /*NEW FEATURE*/
         }
     </style>
     <link rel="stylesheet" href="css/style.css" class="padding-left:200px;">
@@ -91,20 +114,21 @@
             <a href="history.html">History</a>
         </div>
         <img src="images\Images(Alex)\Dinosaur Twitter Logo.jpg" alt="Front Image" class="main-image grid-item"
-            width="1500px">
-        <h3>Get in touch with us Here</h3>
+            width="750px">
+        <h1 class="centered">Get in touch with us Here</h1>
         <button class="button button1"><a href="https://twitter.com/dcg_dinosaur"><img src="images\Images(Alex)\OIP.jpg"
                     alt="Twitter" width="30px"></a>Twitter</button>
         <button class="button button1"><a href="https://facebook.com/"><img
                     src="images\Images(Alex)\facebook-logo-3.png" alt="Facebook" width="30px"></a>Facebook</button>
-        <h5 class="grid-item main-1">This is a rendering of what one of our most important dinosaurs, Carnotaurus, will
+        <h5 class="grid-item main-1">This is a rendering of what one of our most important dinosaurs, Carnotaurus,
+            will
             be
             like.</h5>
         <img src="images\Images(Alex)\Dinosaur eating a guy.png" alt="Dinosaur Eating a Man" class="grid-item ">
-        <p class="grid-item main-1">The Carnotaurus will be a new keystone species and will help revitalise the eastern
+        <p class="grid-item main-1">The Carnotaurus will be a new keystone species and will help revitalise the
+            eastern
             parts of the state. With its incredible sense of smell, it may even be trained for rescue work with
-            Emergency
-            Services.
+            Emergency Services.
         </p>
         <button class="button button1" onclick="askName()" width="500px">What is Your Name?</button>
         <p id="askname"></p>
@@ -114,9 +138,11 @@
             allowfullscreen class="grid-item support-1"></iframe>
         <div class=" grid-item main-2">
             <blockquote class="twitter-tweet ">
-                <p lang="en" dir="ltr">Share your thoughts with us! Do you support the Dinosaur Reclamation Project</p>
+                <p lang="en" dir="ltr">Share your thoughts with us! Do you support the Dinosaur Reclamation Project
+                </p>
                 &mdash; Dinosaur Creation Project (@dcg_dinosaur) <a
-                    href="https://twitter.com/dcg_dinosaur/status/1580645910241251329?ref_src=twsrc%5Etfw">October 13,
+                    href="https://twitter.com/dcg_dinosaur/status/1580645910241251329?ref_src=twsrc%5Etfw">October
+                    13,
                     2022</a>
             </blockquote>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -125,13 +151,15 @@
                         href="https://t.co/KCo4FtcX6t">pic.twitter.com/KCo4FtcX6t</a></p>&mdash; Dinosaur Creation
                 Project
                 (@dcg_dinosaur) <a
-                    href="https://twitter.com/dcg_dinosaur/status/1580651800386240512?ref_src=twsrc%5Etfw">October 13,
+                    href="https://twitter.com/dcg_dinosaur/status/1580651800386240512?ref_src=twsrc%5Etfw">October
+                    13,
                     2022</a>
             </blockquote>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             <blockquote class="twitter-tweet">
                 <p lang="art" dir="ltr">🦖🦕🦖🦖😄🙋🪨📛</p>&mdash; Dinosaur Creation Project (@dcg_dinosaur) <a
-                    href="https://twitter.com/dcg_dinosaur/status/1580648304609984512?ref_src=twsrc%5Etfw">October 13,
+                    href="https://twitter.com/dcg_dinosaur/status/1580648304609984512?ref_src=twsrc%5Etfw">October
+                    13,
                     2022</a>
             </blockquote>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -139,7 +167,8 @@
                 <p lang="en" dir="ltr">We are proud to announce our plan to release the first Stegosaurus into the
                     Madison
                     Park Arboretum by 2024</p>&mdash; Dinosaur Creation Project (@dcg_dinosaur) <a
-                    href="https://twitter.com/dcg_dinosaur/status/1580645518191267841?ref_src=twsrc%5Etfw">October 13,
+                    href="https://twitter.com/dcg_dinosaur/status/1580645518191267841?ref_src=twsrc%5Etfw">October
+                    13,
                     2022</a>
             </blockquote>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
