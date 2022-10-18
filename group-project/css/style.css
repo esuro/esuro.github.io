@@ -51,10 +51,9 @@ footer {
     font-family: sans-serif;
     font-size: 20px;
     text-align: center;
-    padding: 25px;
-    background-color: rgb(255, 0, 0);
+    padding: 20px;
+    background-color: black;
     color: white;
-    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
