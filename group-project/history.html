@@ -76,7 +76,7 @@
         }
 
         .images {
-            height: 200px;
+            height: 300px;
             width: 440px;
             float: left;
             /* NEW CSS STYLE*/
@@ -98,6 +98,10 @@
         .extinction-header {
             font-size: 48px;
             font-weight: bold;
+        }
+
+        #simulation {
+            width: 500px;
         }
     </style>
 </head>
@@ -130,16 +134,43 @@
             <p class="time-text">Cretaceous Period: 144-65 million years ago</p>
         </div>
         <div class="grid-item after">
-            <img src="images/afterExtinction.jpg" class="images" alt="Picture before Dinosaur Extincion">
+            <img src="images/tertiary.jpg" class="images" alt="Picture before Dinosaur Extincion">
             <p class="time-text">Tertiary Era: 65-0 million years ago</p>
         </div>
         <div class="grid-item main-content">
             <h2 class="extinction-header">Extinction:</h2>
             <br>
-            <p>During the late cretaceous, around 66 million years ago, dinosaurs were thriving.</p>
+            <p>During the late cretaceous, around 66 million years ago, dinosaurs were thriving. Life on Earth was
+                great, and everyone was happy. But then, an asteroid the size of Mount Everest slammmed into the gulf of
+                mexico at 27,000 miles per hour, and the world was changed forever. The following video will give you a
+                detailed explanation of how the poor dinosaurs went extinct, and better sheds light on the tragedy they
+                went through.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dFCbJmgeHmA"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <p>Unfortunately, without any dinosaurs defending the world, pesky mammals arose, and eventually evolved
+                into the humans we are today.</p>
+            <img src="images/beforeExtinction.webp" alt="Simulation of extinction" id="simulation">
+            <br>
+            <button class="button" onclick="revive();">Before Extinction</button>
+            <button class="button" onclick="kill();">After Extinction</button>
+
+
         </div>
     </div>
+    <script>
+        function revive() {
+            let dinos = document.getElementById('simulation')
+            dinos.src = 'images/beforeExtinction.webp';
 
+        }
+        function kill() {
+            let dinos = document.getElementById('simulation')
+            dinos.src = 'images/afterExtinction.jpg';
+        }
+
+    </script>
 </body>
 
 </html>
