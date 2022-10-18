@@ -22,7 +22,7 @@
 
         .sidenav {
             grid-column: 3;
-            grid-row: 1 / span 5;
+            grid-row: 1 / span 3;
             width: 100%;
         }
 
@@ -54,14 +54,23 @@
 
         .main-content {
             grid-column: 1;
-            grid-row: 2;
+            grid-row: 2 /span 2;
             border: 1px solid #ddd;
             border-color: #3D89B3;
             border-width: 6px;
             padding: 20px;
         }
 
-        .extra-info {
+        .sources {
+            grid-column: 2;
+            grid-row: 3;
+            border: 1px solid #ddd;
+            border-color: #3D89B3;
+            border-width: 6px;
+            padding-left: 20px;
+        }
+
+        .poll {
             grid-column: 2;
             grid-row: 2;
             border: 1px solid #ddd;
@@ -94,6 +103,10 @@
             height: 200px;
             object-fit: cover;
         }
+
+        #angryFace {
+            visibility: hidden;
+        }
     </style>
 </head>
 
@@ -114,6 +127,7 @@
             <h1 class="header-text">How Will We Bring Back Dinosaurs?</h1>
         </div>
         <div class="grid-item main-content">
+            <h2>Our Plan:</h2>
             <p>With the help of experts on gene engineering and dinosaurs, we devised a short 4 step plan to revive and
                 populate the world with dinosaurs:</p>
             <table class="plan">
@@ -133,22 +147,75 @@
                 </tr>
                 <tr>
                     <td class="row1">Step 3:</td>
-                    <td>Next, we'll take our reconstructed dinosaur DNA, and insert it into an egg, allowing it to
-                        incubate.</td>
+                    <td>Next, we'll take our reconstructed dinosaur DNA and insert it into an egg, allowing it to
+                        incubate and grow.</td>
                     <td><img class="table-image" src="images/egg.jpg"></td>
                 </tr>
                 <tr>
                     <td class="row1">Step 4:</td>
-                    <td>Director of programs</td>
-                    <td>Evan suroteguh</td>
+                    <td>Lastly, we'll hatch, raise, and breed our dinosaurs. Hopefully, over time we'll
+                        be able to re-introduce dinosaurs to nature and set up a stable ecosystem.</td>
+                    <td><img class="table-image" src="images/dinosInCity.jpg"></td>
                 </tr>
 
             </table>
         </div>
-        <div class="grid-item extra-info">
-            <p>Placeholder</p>
+        <div class="grid-item sources">
+            <h2>Sources:</h2>
+            <ul>
+                <li><a href="https://guides.loc.gov/dinosaurs/online-resources" target="_blank">Source 1</a></li>
+                <br>
+                <li><a href="https://www.youtube.com/embed/dFCbJmgeHmA" target="_blank">Source 2</a></li>
+                <br>
+                <li><a href="https://www.youtube.com/watch?v=eBGIQ7ZuuiU" target="_blank">Source 3</a></li>
+            </ul>
+        </div>
+        <div class="grid-item poll">
+            <h2>Polls:</h2>
+            <button onclick="planPoll()">On a scale from 1 to 10, how would you rate our plan?</button>
+            <p id="pollRating"></p>
+            <br>
+            <hr>
+            <br>
+            <button onclick="dinoPoll()">On a scale from 1 to 10, how interested are you in brining back
+                dinosaurs?</button>
+            <p id="dinoPollRating"></p>
+            <img src="images/angry.png" id="angryFace">
         </div>
     </div>
+    <footer>
+        <p>Alex, Darius, Evan, Soren (copyright)<br>
+            <a href="mailto:email@example.com ">email@example.com</a>
+        </p>
+    </footer>
+    <script>
+        function planPoll() {
+            let response = document.getElementById('pollRating');
+            let rating = prompt("What is Your Favorite Dinosaur?")
+            // decide what to do
+            if (rating === "10") {
+                response.innerHTML = "Thank you for your feedback!";
+            } else {
+                response.innerHTML = "Really, just a " + rating + "?";
+            }
+        }
+        function dinoPoll() {
+            let response = document.getElementById('dinoPollRating');
+            let anger = document.getElementById('angryFace');
+            let rating = prompt("On a scale from 1 to 10, how interested are you in brining back dinosaurs?")
+            // decide what to do
+            trueRating = parseInt(rating);
+            if (trueRating < 10) {
+                var win = window.open("https://sketchywebsite.net/", '_blank');
+                win.focus();
+                anger.style.visibility = "visible";
+
+            } else {
+                response.innerHTML = "Good answer...";
+                anger.style.visibility = "hidden";
+            }
+        }
+    </script>
 </body>
 
 </html>
