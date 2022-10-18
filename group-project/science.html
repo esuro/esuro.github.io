@@ -11,14 +11,92 @@
         .grid-container {
             display: grid;
             gap: 10px;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: 55% 30% 15%;
+        }
+
+        .grid-item {
+            font-size: 20px;
+            padding-top: 0px;
+            color: #3D89B3;
+        }
+
+        .sidenav {
+            grid-column: 3;
+            grid-row: 1 / span 5;
+            width: 100%;
+        }
+
+        .header {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            position: relative;
+            text-align: center;
+            color: #3D89B3;
+            height: 500px;
+        }
+
+        .main-image {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            width: 122%;
+            height: 100%;
+            margin-left: -225px;
+            margin-top: -10px;
+            opacity: 0.3;
+        }
+
+        .header-text {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .main-content {
+            grid-column: 1;
+            grid-row: 2;
+            border: 1px solid #ddd;
+            border-color: #3D89B3;
+            border-width: 6px;
+            padding: 20px;
+        }
+
+        .extra-info {
+            grid-column: 2;
+            grid-row: 2;
+            border: 1px solid #ddd;
+            border-color: #3D89B3;
+            border-width: 6px;
+            padding-left: 20px;
+        }
+
+        .plan {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .plan td,
+        .plan th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            border-color: #3D89B3;
+            border-width: 2px;
+            font-size: 16px;
+        }
+
+        .row1 {
+            width: 52px;
+        }
+
+        .table-image {
+            width: 200px;
         }
     </style>
 </head>
 
 <body>
     <div class="grid-container">
-        <div class="sidebar">
+        <div class="sidenav sidebar">
             <a class="active" href="index.html">Home</a>
             <a href="about-us.html">About Us</a>
             <a href="economy.html">Economy</a>
@@ -26,13 +104,45 @@
             <a href="science.html">Science</a>
             <a href="world-peace.html">World Peace</a>
             <a href="history.html">History</a>
+
         </div>
         <div class="grid-item header" style="padding-left: 220px;">
-            <h1>How Will We Bring Back Dinosaurs?</h1>
-            <h2>Scientists have created many methods for bringing back dinosaurs</h2>
+            <img class="main-image" src="images/genes.webp">
+            <h1 class="header-text">How Will We Bring Back Dinosaurs?</h1>
         </div>
         <div class="grid-item main-content">
+            <p>With the help of experts on gene engineering and dinosaurs, we devised a short 4 step plan to revive and
+                populate the world with dinosaurs:</p>
+            <table class="plan">
 
+                <tr>
+                    <td>Step 1:</td>
+                    <td>First, we will retrieve a well preserved dinosaur fossil or a mosquoito trapped in amber
+                        containing a
+                        suffecient amount of well preserved dinosaur blood.</td>
+                    <td><img class="table-image" src="images/step1.webp"></td>
+                </tr>
+                <tr>
+                    <td class="row1">Step 2:</td>
+                    <td>Then, using the most advanced editing equipment, we'll carefully extract bit's an pieces of a
+                        dinosaurs DNA and meticulously repair the dinosaur's genome.</td>
+                    <td><img class="table-image" src="images/geneEditing.webp"></td>
+                </tr>
+                <tr>
+                    <td class="row1">Step 3:</td>
+                    <td>Director of programs</td>
+                    <td>Evan suroteguh</td>
+                </tr>
+                <tr>
+                    <td class="row1">Step 4:</td>
+                    <td>Director of programs</td>
+                    <td>Evan suroteguh</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="grid-item extra-info">
+            <p>Placeholder</p>
         </div>
     </div>
 </body>
