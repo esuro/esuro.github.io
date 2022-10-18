@@ -7,18 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The History of Dinosaurs</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/waj8gfv.css">
     <style>
         .grid-container {
             display: grid;
             gap: 10px;
-            grid-template-columns: 25% 60% auto;
+            grid-template-columns: 30% 55% auto;
         }
 
         .grid-item {
             background-color: lightgray;
             text-align: center;
             font-size: 30px;
-            padding: 10px;
+            padding: 0px;
         }
 
         .sidenav {
@@ -29,17 +30,24 @@
         .header {
             grid-column: 1 / span 2;
             grid-row: 1;
+            color: #3D89B3;
+        }
+
+        .time {
+            position: absolute;
+            font-size: 20px;
+            font-weight: 300;
+            padding-top: 40px;
+            padding-left: 15px;
+            font-family: quicksand, sans-serif;
+            font-weight: 700;
+            color: #3D89B3;
+            font-style: normal;
         }
 
         .triassic-time {
             font-size: 20px;
             grid-column: 1;
-            grid-row: 2;
-        }
-
-        .triassic {
-            font-size: 20px;
-            grid-column: 2;
             grid-row: 2;
         }
 
@@ -49,21 +57,9 @@
             grid-row: 3;
         }
 
-        .jurassic {
-            font-size: 20px;
-            grid-column: 2;
-            grid-row: 3;
-        }
-
         .cretaceous-time {
             font-size: 20px;
             grid-column: 1;
-            grid-row: 4;
-        }
-
-        .cretaceous {
-            font-size: 20px;
-            grid-column: 2;
             grid-row: 4;
         }
 
@@ -73,15 +69,20 @@
             grid-row: 5;
         }
 
-        .tertiary {
-            font-size: 20px;
-            grid-column: 2;
-            grid-row: 5;
-        }
-
         .images {
             height: 200px;
+            width: 450px;
             float: left;
+            /* NEW CSS STYLE*/
+            opacity: 0.3;
+            padding: 0px;
+            justify-content: center;
+        }
+
+        .main-content {
+            background-color: white;
+            grid-column: 2;
+            grid-row: 2 / span 4;
         }
     </style>
 </head>
@@ -102,35 +103,25 @@
             <h1>The History of Dinosaurs</h1>
         </div>
         <div class="grid-item triassic-time ">
-            Triassic Period: 248-213 million years ago
-        </div>
-        <div class="grid-item triassic">
             <img src="images/triassic.jpg" class="images" alt="Picture of Triassic">
+            <p class="time">Triassic Period: 248-213 million years ago</p>
         </div>
         <div class="grid-item jurassic-time">
-            Jurassic Period: 213-144 million years ago
-        </div>
-        <div class="grid-item jurassic">
             <img src="images/jurassic.jpg" class="images" alt="Picture of Jurassic">
+            <p class="time">Jurassic Period: 213-144 million years ago</p>
         </div>
         <div class="grid-item cretaceous-time ">
-            Cretaceous Period: 144-65 million years ago
-        </div>
-        <div class="grid-item cretaceous">
             <img src="images/cretaceous.jpg" class="images" alt="Picture of Cretaceous">
+            <p class="time">Cretaceous Period: 144-65 million years ago</p>
         </div>
         <div class="grid-item after">
-            After the dinosaurs: 65-0 million years ago
+            <img src="images/afterExtinction.jpg" class="images" alt="Picture before Dinosaur Extincion">
+            <p class="time">Tertiary Era: 65-0 million years ago</p>
         </div>
-        <div class="grid-item tertiary">
-            <img src="images/beforeExtinction.jpg" class="images" alt="Picture before Dinosaur Extincion">
+        <div class="grid-item main-content">
+
         </div>
     </div>
-    <footer>
-        <p>Alex, Darius, Evan, Soren (copyright)<br>
-            <a href="mailto:email@example.com ">email@example.com</a>
-        </p>
-    </footer>
 
 </body>
 
