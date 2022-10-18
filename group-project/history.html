@@ -16,10 +16,12 @@
         }
 
         .grid-item {
-            background-color: lightgray;
             text-align: center;
             font-size: 30px;
             padding: 0px;
+            border: 1px solid #ddd;
+            border-color: #3D89B3;
+            border-width: 6px;
         }
 
         .sidenav {
@@ -30,15 +32,19 @@
         .header {
             grid-column: 1 / span 2;
             grid-row: 1;
+            border: 1px solid #ddd;
+            padding-left: 30px;
+            border-color: #3D89B3;
+            border-width: 6px;
             color: #3D89B3;
         }
 
-        .time {
+        .time-text {
             position: absolute;
             font-size: 20px;
             font-weight: 300;
-            padding-top: 40px;
-            padding-left: 15px;
+            padding-top: 20px;
+            padding: 10px;
             font-family: quicksand, sans-serif;
             font-weight: 700;
             color: #3D89B3;
@@ -71,10 +77,10 @@
 
         .images {
             height: 200px;
-            width: 450px;
+            width: 440px;
             float: left;
             /* NEW CSS STYLE*/
-            opacity: 0.3;
+            opacity: 0.4;
             padding: 0px;
             justify-content: center;
         }
@@ -82,7 +88,16 @@
         .main-content {
             background-color: white;
             grid-column: 2;
+            text-align: left;
             grid-row: 2 / span 4;
+            padding-left: 30px;
+            font-size: 22px;
+            color: #3D89B3;
+        }
+
+        .extinction-header {
+            font-size: 48px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -104,22 +119,24 @@
         </div>
         <div class="grid-item triassic-time ">
             <img src="images/triassic.jpg" class="images" alt="Picture of Triassic">
-            <p class="time">Triassic Period: 248-213 million years ago</p>
+            <p class="time-text">Triassic Period: 248-213 million years ago</p>
         </div>
         <div class="grid-item jurassic-time">
             <img src="images/jurassic.jpg" class="images" alt="Picture of Jurassic">
-            <p class="time">Jurassic Period: 213-144 million years ago</p>
+            <p class="time-text">Jurassic Period: 213-144 million years ago</p>
         </div>
         <div class="grid-item cretaceous-time ">
             <img src="images/cretaceous.jpg" class="images" alt="Picture of Cretaceous">
-            <p class="time">Cretaceous Period: 144-65 million years ago</p>
+            <p class="time-text">Cretaceous Period: 144-65 million years ago</p>
         </div>
         <div class="grid-item after">
             <img src="images/afterExtinction.jpg" class="images" alt="Picture before Dinosaur Extincion">
-            <p class="time">Tertiary Era: 65-0 million years ago</p>
+            <p class="time-text">Tertiary Era: 65-0 million years ago</p>
         </div>
         <div class="grid-item main-content">
-
+            <h2 class="extinction-header">Extinction:</h2>
+            <br>
+            <p>During the late cretaceous, around 66 million years ago, dinosaurs were thriving.</p>
         </div>
     </div>
 
