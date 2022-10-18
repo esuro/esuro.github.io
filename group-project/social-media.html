@@ -65,6 +65,18 @@
             grid-row: 3 / span 1;
             background-color: azure;
         }
+
+        .main-image {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            width: 122%;
+            height: 105%;
+            margin-left: -225px;
+            margin-top: -10px;
+            /*NEW FEATURE*/
+            opacity: 0.5;
+            /*NEW FEATURE*/
+        }
     </style>
     <link rel="stylesheet" href="css/style.css" class="padding-left:200px;">
 </head>
@@ -81,10 +93,11 @@
             <a href="world-peace.html">World Peace</a>
             <a href="history.html">History</a>
         </div>
+        <img src="Images(Alex)\Dinosaur Twitter Logo.jpg" alt="Front Image" class="main-image">
         <h3>Get in touch with us Here</h3>
-        <button><a href="https://twitter.com/dcg_dinosaur"><img src="Images-Alex\OIP.jpg" alt="Twitter"
+        <button><a href="https://twitter.com/dcg_dinosaur"><img src="Images(Alex)\OIP.jpg" alt="Twitter"
                     width="30px"></a>Twitter</button>
-        <button><a href="https://facebook.com/"><img src="Images-Alex\facebook-logo-3.png" alt="Facebook"
+        <button><a href="https://facebook.com/"><img src="Images(Alex)\facebook-logo-3.png" alt="Facebook"
                     width="30px"></a>Facebook</button>
         <h5 class="grid-item main-1">This is a rendering of what one of our most important dinosaurs, Carnotaurus, will
             be
@@ -149,7 +162,7 @@
             if (name === "SudoSensei") {
                 nameParagraph.innerHTML = "Hello SudoSensei, welcome to the Dinosaur Creation Project";
             } else {
-                nameParagraph.innerHTML = "Hello, not SudoSensei, why are you here,  " + name + " Regardless, welcome to the Dinosaur Creation Project."
+                nameParagraph.innerHTML = "Hello " + name + " you aren't SudoSensei, Regardless, welcome to the Dinosaur Creation Project."
             }
             // Please try both SudoSensei and something else
         }
