@@ -8,6 +8,10 @@
     overflow: auto;
     font-family: sans-serif;
     font-size: 20px;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
 }
 
 .sidebar a {
@@ -33,9 +37,11 @@
         height: auto;
         position: right;
     }
+
     .sidebar a {
         float: right;
     }
+
     div.content {
         margin-right: 0;
     }
