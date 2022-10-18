@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/waj8gfv.css">
     <style>
         .grid-container {
             display: grid;
@@ -23,6 +24,28 @@
             font-size: 50px;
         }
 
+        .main-1 {
+            grid-column: 1 / span 2;
+            grid-row: 3;
+        }
+
+        .support-1 {
+            background-color: blanchedalmond;
+            grid-column: 1;
+            grid-row: 4;
+        }
+
+        .support-2 {
+            background-color: blanchedalmond;
+            grid-column: 2;
+            grid-row: 4;
+        }
+
+        .main-2 {
+            grid-column: 1 / span 2;
+            grid-row: 5;
+        }
+
         .main-image {
             grid-column: 1 / span 2;
             grid-row: 1;
@@ -35,76 +58,23 @@
             /*NEW FEATURE*/
         }
 
-        .sidebar {
-            grid-column: 3;
-            grid-row: 1 / span 3;
-        }
-
         .grid-item {
             background-color: lightgrey;
             font-size: 30px;
             padding: 10px;
         }
 
-        .header {
-            grid-column: 1 / span 2;
-            grid-row: 1;
-            position: relative;
-            text-align: center;
-            color: #3D89B3;
-        }
-
-        .title {
-            font-size: 20px;
-            grid-column: 1 / span 2;
-            grid-row: 2;
-            text-align: center;
-            height: 70%;
-            color: #3D89B3;
-        }
-
-        .content1 {
-            font-size: 20px;
-            grid-column: 1;
-            grid-row: 3;
-        }
-
-        .content2 {
-            font-size: 20px;
-            grid-column: 2;
-            grid-row: 3;
-        }
-
-        .title2 {
-            font-size: 20px;
-            grid-column: 1 / span 2;
-            grid-row: 4;
-            text-align: center;
-            height: 70%;
-            color: #3D89B3;
-        }
-
-        .content3 {
-            grid-column: 1;
-        }
-
-        .content4 {
-            grid-column: 2;
-        }
-
-        .sidenav {
+        .sidebar {
             grid-column: 3;
-            grid-row: 3 / span 1;
-            background-color: azure;
+            grid-row: 1 / span 3;
         }
     </style>
-    <link rel="stylesheet" href="css/style.css" class="padding-left:200px;">
 </head>
 <!--I challenged myself by embedding the social media things throughout this page.  This was difficult to get working with the CSS Grid.-->
 
 <body>
-    <div class="background">
-        <div class="sidebar sidenav">
+    <div class="background grid-container">
+        <div class="sidebar">
             <a class="active" href="index.html">Home</a>
             <a href="about-us.html">About Us</a>
             <a href="economy.html">Economy</a>
@@ -112,20 +82,22 @@
             <a href="science.html">Science</a>
             <a href="world-peace.html">World Peace</a>
             <a href="history.html">History</a>
+
         </div>
         <img src="images\Images(Alex)\Dinosaur Twitter Logo.jpg" alt="Front Image" class="main-image grid-item"
             width="750px">
         <h1 class="centered">Get in touch with us Here</h1>
-        <button class="button button1"><a href="https://twitter.com/dcg_dinosaur"><img src="images\Images(Alex)\OIP.jpg"
-                    alt="Twitter" width="30px"></a>Twitter</button>
-        <button class="button button1"><a href="https://facebook.com/"><img
+        <button class="button button1 main-1"><a href="https://twitter.com/dcg_dinosaur"><img
+                    src="images\Images(Alex)\OIP.jpg" alt="Twitter" width="30px"></a>Twitter</button>
+        <button class="button button1 main-1"><a href="https://facebook.com/"><img
                     src="images\Images(Alex)\facebook-logo-3.png" alt="Facebook" width="30px"></a>Facebook</button>
         <h5 class="grid-item main-1">This is a rendering of what one of our most important dinosaurs, Carnotaurus,
             will
             be
             like.</h5>
-        <img src="images\Images(Alex)\Dinosaur eating a guy.png" alt="Dinosaur Eating a Man" class="grid-item ">
-        <p class="grid-item main-1">The Carnotaurus will be a new keystone species and will help revitalise the
+        <img src="images\Images(Alex)\Dinosaur eating a guy.png" alt="Dinosaur Eating a Man"
+            class="grid-item support-1 ">
+        <p class="grid-item support-2">The Carnotaurus will be a new keystone species and will help revitalise the
             eastern
             parts of the state. With its incredible sense of smell, it may even be trained for rescue work with
             Emergency Services.
@@ -136,7 +108,7 @@
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen class="grid-item support-1"></iframe>
-        <div class=" grid-item main-2">
+        <div class=" grid-item content3">
             <blockquote class="twitter-tweet ">
                 <p lang="en" dir="ltr">Share your thoughts with us! Do you support the Dinosaur Reclamation Project
                 </p>
@@ -173,7 +145,6 @@
             </blockquote>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             <hr>
-
         </div>
     </div>
     <footer>
@@ -181,6 +152,7 @@
             <a href="mailto:email@example.com">email@example.com</a>
         </p>
     </footer>
+    </div>
     <script>
         function askName() {
             let nameParagraph = document.getElementById('askname');
