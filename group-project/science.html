@@ -8,6 +8,7 @@
     <title>Scientific Process</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        /*(My Pages: History, Science) I challenged myself this project by using CSS styles in grids in a way I haven't before. This includes changing image opacities in grids, and adding borders to grids. Also, I tried to help my group as much as possible during this project. I helped Evan trouble shoot some issues in his CSS file, and I helped Alex and Soren with their grids early on. I also put more effort into my grid layout and color choices in order to make my webpages look as nice as possible, and I used Javascript in new ways.*/
         .grid-container {
             display: grid;
             gap: 10px;
@@ -101,6 +102,7 @@
         .table-image {
             width: 200px;
             height: 200px;
+            /*New use of CSS*/
             object-fit: cover;
         }
 
@@ -192,7 +194,6 @@
         function planPoll() {
             let response = document.getElementById('pollRating');
             let rating = prompt("What is Your Favorite Dinosaur?")
-            // decide what to do
             if (rating === "10") {
                 response.innerHTML = "Thank you for your feedback!";
             } else {
@@ -203,9 +204,9 @@
             let response = document.getElementById('dinoPollRating');
             let anger = document.getElementById('angryFace');
             let rating = prompt("On a scale from 1 to 10, how interested are you in brining back dinosaurs?")
-            // decide what to do
             trueRating = parseInt(rating);
             if (trueRating < 10) {
+                /*New use of Javascript*/
                 var win = window.open("https://sketchywebsite.net/", '_blank');
                 win.focus();
                 anger.style.visibility = "visible";
