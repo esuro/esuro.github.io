@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         .background {
-            background-color: aquamarine;
+            background-color: rgb(255, 255, 255);
             padding-bottom: 100px;
         }
 
@@ -21,10 +21,9 @@
         }
 
         .grid-item {
-            background-color: rgb(150, 232, 247);
-            text-align: center;
+            background-color: #3d89B3;
             font-size: 30px;
-            padding: 20px;
+            padding: 10px;
         }
 
         .navmenu {
@@ -69,10 +68,8 @@
         .main-image {
             grid-column: 1 / span 2;
             grid-row: 1;
-            width: 122%;
-            height: 105%;
-            margin-left: -225px;
-            margin-top: -10px;
+            margin-left: 10px;
+            margin-top: 10px;
             /*NEW FEATURE*/
             opacity: 0.5;
             /*NEW FEATURE*/
@@ -93,16 +90,17 @@
             <a href="world-peace.html">World Peace</a>
             <a href="history.html">History</a>
         </div>
-        <img src="Images(Alex)\Dinosaur Twitter Logo.jpg" alt="Front Image" class="main-image">
+        <img src="images\Images(Alex)\Dinosaur Twitter Logo.jpg" alt="Front Image" class="main-image grid-item"
+            width="1500px">
         <h3>Get in touch with us Here</h3>
-        <button class="button button1"><a href="https://twitter.com/dcg_dinosaur"><img src="Images(Alex)\OIP.jpg"
+        <button class="button button1"><a href="https://twitter.com/dcg_dinosaur"><img src="images\Images(Alex)\OIP.jpg"
                     alt="Twitter" width="30px"></a>Twitter</button>
-        <button class="button button1"><a href="https://facebook.com/"><img src="Images(Alex)\facebook-logo-3.png"
-                    alt="Facebook" width="30px"></a>Facebook</button>
+        <button class="button button1"><a href="https://facebook.com/"><img
+                    src="images\Images(Alex)\facebook-logo-3.png" alt="Facebook" width="30px"></a>Facebook</button>
         <h5 class="grid-item main-1">This is a rendering of what one of our most important dinosaurs, Carnotaurus, will
             be
             like.</h5>
-        <img src="Images(Alex)/Dinosaur eating a guy.png" alt="Dinosaur Eating a Man" class="grid-item ">
+        <img src="images\Images(Alex)\Dinosaur eating a guy.png" alt="Dinosaur Eating a Man" class="grid-item ">
         <p class="grid-item main-1">The Carnotaurus will be a new keystone species and will help revitalise the eastern
             parts of the state. With its incredible sense of smell, it may even be trained for rescue work with
             Emergency
@@ -157,7 +155,7 @@
     <script>
         function askName() {
             let nameParagraph = document.getElementById('askname');
-            let name = prompt("What is Your Favorite Dinosaur?")
+            let name = prompt("What is Your Name?")
             // decide what to do based on the name
             if (name === "SudoSensei") {
                 nameParagraph.innerHTML = "Hello SudoSensei, welcome to the Dinosaur Creation Project";
