@@ -15,7 +15,7 @@
             gap: 10px;
             grid-template-columns: 42.5% 42.5% auto;
         }
-        
+
         .main-image {
             grid-column: 1 / span 2;
             grid-row: 1;
@@ -25,18 +25,18 @@
             margin-top: -10px;
             opacity: 0.2;
         }
-        
+
         .sidebar {
             grid-column: 3;
             grid-row: 1 / span 3;
         }
-        
+
         .grid-item {
             background-color: #3d89B3;
             font-size: 30px;
             padding: 10px;
         }
-        
+
         .header {
             grid-column: 1 / span 2;
             grid-row: 1;
@@ -44,7 +44,7 @@
             text-align: center;
             color: #FFFFFF;
         }
-        
+
         .peace-image {
             font-size: 20px;
             grid-column: 1 / span 2;
@@ -55,21 +55,21 @@
             box-shadow: 0px 10px #295C78;
             /*NEW FEATURE*/
         }
-        
+
         .title {
             font-size: 20px;
             grid-column: 1 / span 2;
             text-align: center;
             grid-row: 3;
         }
-        
+
         .content1 {
             font-size: 20px;
             grid-column: 1 / span 2;
             grid-row: 4;
             text-align: center;
         }
-        
+
         .title2 {
             font-size: 20px;
             grid-column: 1 / span 2;
@@ -77,12 +77,12 @@
             text-align: center;
             height: 70%;
         }
-        
+
         .content3 {
             grid-column: 1;
             grid-row: 6;
         }
-        
+
         .content4 {
             grid-column: 1;
             grid-row: 7;
@@ -110,23 +110,30 @@
             <img src="images/worldpeace.jpg" alt="earth picture" width="30%" height="140%">
         </div>
         <div class="title ">
-            <h2>World peace is currently maintained by the United Nations. Some background info on how the UN keeps world peace:</h2>
+            <h2>World peace is currently maintained by the United Nations. Some background info on how the UN keeps
+                world peace:</h2>
         </div>
 
         <div class="content1 ">
-            <iframe width="800" height="500" src="https://www.youtube.com/embed/uuwAD5utXIM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="800" height="500" src="https://www.youtube.com/embed/uuwAD5utXIM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </div>
 
         <div class="title2 ">
             <h2>World Peace Simulator</h2>
-            <h3>Our company has designed a simulator to determine the real world effects that dinosaurs would have on world peace. Try it out below!</h3>
+            <h3>Our company has designed a simulator to determine the real world effects that dinosaurs would have on
+                world peace. Try it out below!</h3>
         </div>
 
         <div class="content3">
             <h3><b>Digital representation of dinosaurs affect on the world</b></h3>
             <img src="images/bad.jpg" alt="bad pic" id="pre">
-            <button class="button button1" onclick="document.getElementById('pre').src='images/bad.jpg'">World WITHOUT dinosaurs</button>
-            <button class="button button1" onclick="document.getElementById('pre').src='images/good.jpg'">World WITH dinosaurs</button>
+            <button class="button button1" onclick="document.getElementById('pre').src='images/bad.jpg'">World WITHOUT
+                dinosaurs</button>
+            <button class="button button1" onclick="document.getElementById('pre').src='images/good.jpg'">World WITH
+                dinosaurs</button>
             <hr>
 
         </div>
@@ -136,7 +143,8 @@
             <h3><b>Relationship between amount of dinosaurs and peacefulness.</b></h3>
             <p>Global Peace Index (GPI)</p>
             <p id="peaceful-paragraph"> 5<span>% </span> </p>
-            <button class="button button1" id="peaceful-button" onclick="increasePeace()">Add 1,000 dinosaurs onto Earth</button>
+            <button class="button button1" id="peaceful-button" onclick="increasePeace()">Add 1,000 dinosaurs onto
+                Earth</button>
         </div>
 
     </div>

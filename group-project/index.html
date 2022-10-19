@@ -1,176 +1,303 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
+<!-- CHALLENGE PARAGRAPH:
+
+   The largest issue for me was definetly the layout and ensuring that everything lined up properly. It took awhile trying to figure out the orgnization of the table as well as rotating the font. It was also difficult coordinating the stylistic choices throughout the website as a whole. There were a few instances in which there were inconsistencies between our styles as well as push/pulling. 
+
+-->
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinosaurs</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/kbo4avd.css">
+
     <style>
         body {
             background-color: rgb(0, 0, 0);
+
         }
 
         .grid-container {
             display: grid;
-            grid-gap: 10px;
-            grid-template-columns: 50% 35% 25%;
-            grid-template-rows: auto 37% 30% 20% auto;
+            gap: 0px;
+            grid-template-columns: 42.5% 42.5% auto;
+        }
 
+        .centered {
+            position: absolute;
+            top: 5%;
+            left: 10%;
+
+        }
+
+        .main-image {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .sidebar {
+            grid-column: 3;
+            grid-row: 1 / span 1;
         }
 
         .grid-item {
             background-color: rgb(0, 0, 0);
-            color: white;
-            font-family: sans-serif;
             font-size: 30px;
-            padding: 20px;
+            padding: 10px;
         }
 
-
-
-        .main-image {
-            padding: 0%;
-            background-color: rgb(95, 0, 0);
-            grid-column: 1/ span 3;
-            grid-row: 2/ span 2;
+        .header {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            position: relative;
+            text-align: center;
+            color: #ffffff;
         }
 
-        .main1 {
-            background-color: rgb(0, 0, 0);
-            padding: 0%;
+        .title {
+            background-color: whitesmoke;
+            font-size: 30px;
+            font-family: depot-new-web, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            grid-column: 1 / span 3;
+            grid-row: 2;
+            text-align: center;
+            height: 100%;
+            color: #000000;
+        }
+
+        .content1 {
+            font-family: depot-new-web, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            background-color: whitesmoke;
+            font-size: 20px;
             grid-column: 1;
             grid-row: 3;
+            padding-left: 100px;
+
         }
 
-        .main2 {
-            background-color: rgb(0, 0, 0);
+        .content2 {
+            background-color: whitesmoke;
+            font-size: 20px;
+            grid-column: 2/ span 2;
+            grid-row: 3;
+            padding-left: 30%;
+            padding-bottom: 100px;
+            left: 50%;
+        }
+
+        .title2 {
+            font-size: 20px;
+            grid-column: 1 / span 2;
+            grid-row: 4;
+            text-align: center;
+            height: 70%;
+            color: #3D89B3;
+        }
+
+        .content3 {
+            color: white;
             grid-column: 1;
             grid-row: 5;
         }
 
-        .sidenav {
+        .content4 {
+            color: white;
+            background-color: rgb(0, 136, 255);
+            grid-column: 2/ span 2;
+            padding: 50px;
+            grid-row: 5;
+        }
+
+        .content5 {
+            background-color: rgb(255, 255, 255);
+            grid-column: 1;
+            grid-row: 6;
+            color: white;
+            padding: 40px;
+        }
+
+        .content6 {
+            background-color: rgba(0, 0, 0, 0);
+            grid-column: 2;
+            padding: 20px;
+            grid-row: 6;
+            color: white;
+            text-align: center;
+            position: relative;
+            bottom: 5%;
+            left: 0%;
+            top: 30%;
+            font-size: 125px;
+        }
+
+        .filler {
             background-color: rgb(0, 0, 0);
             grid-column: 3;
-            grid-row: 1/ span 3;
-            text-align: right;
+            grid-row: 6;
         }
 
-        .supportsection1 {
-            background-color: rgb(0, 0, 0);
-            grid-column: 1;
-            grid-row: 4;
-            background-color: rgb(220, 220, 220);
-            color: rgb(0, 0, 0);
-        }
-
-        .supportsection2 {
-            background-color: rgb(0, 0, 0);
-            grid-column: 2;
-            grid-row: 4;
-            background-color: rgb(0, 0, 0);
-        }
-
-
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
+        /*NEW FEATURE*/
+        .dinosaurtable {
+            font-family: depot-new-web, sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 30px;
+            border-collapse: collapse;
+            width: 100%;
+            color: #000000;
             text-align: center;
-            width: 100%;
-            background-color: white;
         }
 
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
+        .dinosaurtable img {
+            max-height: 60%;
+            max-width: 60%;
         }
 
-        #sidebar,
-        #content {
-            height: 100%;
-            overflow: auto;
+        .dinosaurtable td,
+        .dinosaurtable th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            width: 50%;
+            /*NEW FEATURE*/
+            border-color: #000000;
+            border-width: 5px;
+            /*NEW FEATURE*/
         }
 
-        #sidebar {
-            position: absolute;
-            right: 0;
-            top: 0;
-            z-index: 1;
-            background: rgb(255, 0, 0);
-            width: 20%;
-            transition: width .35s;
-        }
-
-        #sidebar.collapsed {
-            width: 0;
-        }
-
-        #content {
-            background: rgb(255, 255, 255);
-            width: 100%;
-        }
-
-        button {
-            width: 30px;
-            height: 30px;
-            right: 0;
-            border-radius: 50%;
-            border: none;
-            outline: none;
-            background: black;
-            margin: 20px;
-            cursor: pointer;
-        }
-
-        #closer {
-            float: right;
+        .dinosaurstable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #000000;
+            color: white;
         }
     </style>
 </head>
 
 <body>
-    <div id="sidebar" class="collapsed">
-        <button id="closer" title="Close sidebar"></button>
+    <div class="grid-container">
         <div class="sidebar">
             <a class="active" href="index.html">Home</a>
             <a href="about-us.html">About Us</a>
             <a href="economy.html">Economy</a>
             <a href="social-media.html">Social Media</a>
-
+            <a href="science.html">Science</a>
+            <a href="world-peace.html">World Peace</a>
+            <a href="history.html">History</a>
 
         </div>
-    </div>
-    <div id="content">
-        <button style="position: absolute; right: 0; top: 0;" title="Toggle sidebar"></button>
-        <div class="grid-container">
-            <div class="grid-item main-image">
-                <p>test</p>
-            </div>
+        <div class="grid-item header">
+            <img src="images/skeleton.jpg" class="main-image" alt="dinosaur" width="100%">
+            <h1 style="font-size: 100px;" class="centered">Welcome</h1>
+        </div>
+        <div class="title ">
+            <h2>The Future is in the Past!</h2>
+        </div>
+        <div class="content1 ">
+            <p style="font-size: 30px;"> Studying dinosaurs has played a key role in developing evolutionary theory and
+                other scientific concepts,
+                such as plate tectonics and biogeography. All of these pursuits arise as a result of humanity's innate
+                curiosity to investigate how our
+                world works and where we fit within the natural world we see around us. Because of this, our company had
+                the innovative idea to bring back dinosaurs into our modern world today. We belive this is the next step
+                for the progression of humanity.</p>
+        </div>
+        <div class="content2 ">
+            <img src="images/brach.webp" width="auto" height="100%">
+        </div>
+        <div class="content3">
+            <iframe width="800" height="500" src="https://www.youtube.com/embed/NkEU6fC_nhY?autoplay=1&mute=1"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div class="content4">
+            <p style="font-size: 30px;"> Imagine a world where we humans are able to walk alongside the ancient
+                dinosaurs. These prehistoric creatures will only do good for our world and increase the biodiversity
+                present throughout Earth's current biomes. It's the 21st century so it is only right that we honor those
+                who walked this Earth before us. Though it may seem scary, keep in mind that any significant change is
+                often met with denial and fear. The only factor once dinosaurs are reintegrated into society is the
+                normalization of walking with the dinos.</p>
+        </div>
+        <div class="content5">
+            <table class="dinosaurtable">
+                <tr>
+                    <td>Tyrannosaurus Rex</td>
+                    <td><img src="images/rex.webp" alt="rex"></td>
+                </tr>
+                <tr>
+                    <td>Triceratops</td>
+                    <td><img src="images/tri.webp" alt="trike"></td>
+                </tr>
+                <tr>
+                    <td>Velociraptor</td>
+                    <td><img src="images/raptor.webp" alt="raptor"></td>
+                </tr>
+                <tr>
+                    <td>Stegosaurus</td>
+                    <td><img src="images/stego.webp" alt="stego"></td>
+                </tr>
+                <tr>
+                    <td>Spinosaurus</td>
+                    <td><img src="images/spino.webp" alt="spino"></td>
+                </tr>
+                <tr>
+                    <td>Archaepteryx</td>
+                    <td><img src="images/arch.webp" alt="Archaepteryx"></td>
+                </tr>
+                <tr>
+                    <td>Brachiosaurus</td>
+                    <td><img src="images/brach1.webp" alt="brach"></td>
+                </tr>
+                <tr>
+                    <td>Allosaurus</td>
+                    <td><img src="images/allo.webp" alt="allo"></td>
+                </tr>
+                <tr>
+                    <td>Apatosaurus</td>
+                    <td><img src="images/apat.webp" alt="Apatosaurus"></td>
+                </tr>
+                <tr>
+                    <td>Dilophosaurus</td>
+                    <td><img src="images/dilo.webp" alt="dilo"></td>
+                </tr>
+
+
+            </table>
+        </div>
+        /*NEW FEATURE*/
+        <div class="content6">
+            <h1 style="transform: rotate(270deg);">What Dinosaurs?</h1>
+        </div>
+
+        <div class="filler">
+
         </div>
 
     </div>
+
+
     </div>
-
-
-
     <footer>
-        <p>Alex, Darius, Evan, Soren (copyright)<br>
-            <a href="mailto:email@example.com">email@example.com</a>
+        <p>Alex, Darius, Evan, Soren &copy <a href="mailto:sghorai@eastsideprep.org ">dinogroup@aol.org</a>
         </p>
     </footer>
+
 </body>
 <script>
-    const buttons = document.querySelectorAll("button");
 
-    buttons.forEach(button =>
-        button.addEventListener("click", _ => {
-            document.getElementById("sidebar").classList.toggle("collapsed");
-        })
-    );
 
 </script>
 
