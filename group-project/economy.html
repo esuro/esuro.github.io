@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Economic Benefits</title>
     <link rel="stylesheet" href="css/style.css" class="padding-left:200px;">
+    <link rel="stylesheet" href="https://use.typekit.net/kbo4avd.css">
     <style>
         .grid-container {
             display: grid;
             gap: 10px;
             grid-template-columns: 42.5% 42.5% auto;
         }
-
+        
         .centered {
             position: absolute;
             top: 80%;
@@ -22,49 +23,48 @@
             color: crimson;
             font-size: 50px;
         }
-
+        
         .main-1 {
             grid-column: 1;
             grid-row: 3;
         }
-
+        
         .main-15 {
             grid-column: 2;
             grid-row: 3
         }
-
+        
         .support-1 {
             background-color: blanchedalmond;
             grid-column: 1;
             grid-row: 4;
         }
-
+        
         .support-2 {
             background-color: blanchedalmond;
             grid-column: 2;
             grid-row: 4;
         }
-
+        
         .main-2 {
             grid-column: 1 / span 2;
             grid-row: 5;
             align-items: center;
             text-align: center;
         }
-
+        
         .support-3 {
             background-color: blanchedalmond;
             grid-column: 1;
             grid-row: 6;
         }
-
+        
         .support-4 {
             background-color: blanchedalmond;
             grid-column: 2;
             grid-row: 6;
         }
-
-
+        
         .main-image {
             grid-column: 1 / span 2;
             grid-row: 1;
@@ -76,13 +76,13 @@
             opacity: 0.2;
             /*NEW FEATURE*/
         }
-
+        
         .grid-item {
             background-color: lightgrey;
             font-size: 30px;
             padding: 10px;
         }
-
+        
         .sidebar {
             grid-column: 3;
             grid-row: 1 / span 3;
@@ -120,8 +120,7 @@
                     <!--NOBODY TOUCH THE BUTTON, IT HAS BROKEN SO MUCH AND IT TOOK 45 MINUTES TO TROUBLESHOOT-->
                     <img src="images\Images(Alex)\Seattle(before).jpg" alt="Seattle" id="seattle" width="1000px">
                     <hr>
-                    <button
-                        onclick="document.getElementById ('seattle').src='images/Images(Alex)/Seattle(before).jpg'">This
+                    <button onclick="document.getElementById ('seattle').src='images/Images(Alex)/Seattle(before).jpg'">This
                         is Today,
                         before the Dinosaur Reclamation Project</button>
                     <button onclick="document.getElementById ('seattle').src='images/Images(Alex)/Utopia.jpg'">This is
@@ -177,15 +176,14 @@
         </div>
 </div>
 <footer>
-    <p>Alex, Darius, Evan, Soren $copy<br>
-        <a href="mailto:email@example.com">astewart@eastsideprep.org</a>
+    <p>Alex, Darius, Evan, Soren &copy <a href="mailto:sghorai@eastsideprep.org ">dinogroup@aol.org</a>
     </p>
 </footer>
 <script>
     function askDino() {
         let nameParagraph = document.getElementById('askdino');
         let name = prompt("What is Your Favorite Dinosaur?")
-        // decide what to do
+            // decide what to do
         if (name === "Trex") {
             nameParagraph.innerHTML = "Daring today, arent we.";
         } else {

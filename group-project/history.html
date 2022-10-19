@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The History of Dinosaurs</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/waj8gfv.css">
+    <link rel="stylesheet" href="https://use.typekit.net/kbo4avd.css">
     <style>
         .grid-container {
             display: grid;
             gap: 10px;
             grid-template-columns: 30% 55% auto;
         }
-
+        
         .grid-item {
             text-align: center;
             font-size: 30px;
@@ -23,12 +23,12 @@
             border-color: #3D89B3;
             border-width: 6px;
         }
-
+        
         .sidenav {
             grid-column: 3;
             grid-row: 1 / span 5;
         }
-
+        
         .header {
             grid-column: 1 / span 2;
             grid-row: 1;
@@ -38,7 +38,7 @@
             border-width: 6px;
             color: #3D89B3;
         }
-
+        
         .time-text {
             position: absolute;
             font-size: 20px;
@@ -50,31 +50,31 @@
             color: #3D89B3;
             font-style: normal;
         }
-
+        
         .triassic-time {
             font-size: 20px;
             grid-column: 1;
             grid-row: 2;
         }
-
+        
         .jurassic-time {
             font-size: 20px;
             grid-column: 1;
             grid-row: 3;
         }
-
+        
         .cretaceous-time {
             font-size: 20px;
             grid-column: 1;
             grid-row: 4;
         }
-
+        
         .after {
             font-size: 20px;
             grid-column: 1;
             grid-row: 5;
         }
-
+        
         .images {
             height: 300px;
             width: 440px;
@@ -84,7 +84,7 @@
             padding: 0px;
             justify-content: center;
         }
-
+        
         .main-content {
             background-color: white;
             grid-column: 2;
@@ -94,12 +94,12 @@
             font-size: 22px;
             color: #3D89B3;
         }
-
+        
         .extinction-header {
             font-size: 48px;
             font-weight: bold;
         }
-
+        
         #simulation {
             width: 500px;
         }
@@ -140,17 +140,10 @@
         <div class="grid-item main-content">
             <h2 class="extinction-header">Extinction:</h2>
             <br>
-            <p>During the late cretaceous, around 66 million years ago, dinosaurs were thriving. Life on Earth was
-                great, and everyone was happy. But then, an asteroid the size of Mount Everest slammmed into the gulf of
-                mexico at 27,000 miles per hour, and the world was changed forever. The following video will give you a
-                detailed explanation of how the poor dinosaurs went extinct, and better sheds light on the tragedy they
-                went through.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dFCbJmgeHmA"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            <p>Unfortunately, without any dinosaurs defending the world, pesky mammals arose, and eventually evolved
-                into the humans we are today.</p>
+            <p>During the late cretaceous, around 66 million years ago, dinosaurs were thriving. Life on Earth was great, and everyone was happy. But then, an asteroid the size of Mount Everest slammmed into the gulf of mexico at 27,000 miles per hour, and
+                the world was changed forever. The following video will give you a detailed explanation of how the poor dinosaurs went extinct, and better sheds light on the tragedy they went through.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dFCbJmgeHmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Unfortunately, without any dinosaurs defending the world, pesky mammals arose, and eventually evolved into the humans we are today.</p>
             <img src="images/beforeExtinction.webp" alt="Simulation of extinction" id="simulation">
             <br>
             <button class="button" onclick="revive();">Before Extinction</button>
@@ -160,8 +153,7 @@
         </div>
     </div>
     <footer>
-        <p>Alex, Darius, Evan, Soren (copyright)<br>
-            <a href="mailto:email@example.com ">email@example.com</a>
+        <p>Alex, Darius, Evan, Soren &copy <a href="mailto:sghorai@eastsideprep.org ">dinogroup@aol.org</a>
         </p>
     </footer>
     <script>
@@ -170,11 +162,11 @@
             dinos.src = 'images/beforeExtinction.webp';
 
         }
+
         function kill() {
             let dinos = document.getElementById('simulation')
             dinos.src = 'images/afterExtinction.jpg';
         }
-
     </script>
 </body>
 
