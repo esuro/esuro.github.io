@@ -25,8 +25,13 @@
         }
 
         .main-1 {
-            grid-column: 1 / span 2;
+            grid-column: 1;
             grid-row: 3;
+        }
+
+        .main-15 {
+            grid-column: 2;
+            grid-row: 3
         }
 
         .support-1 {
@@ -44,7 +49,22 @@
         .main-2 {
             grid-column: 1 / span 2;
             grid-row: 5;
+            align-items: center;
+            text-align: center;
         }
+
+        .support-3 {
+            background-color: blanchedalmond;
+            grid-column: 1;
+            grid-row: 6;
+        }
+
+        .support-4 {
+            background-color: blanchedalmond;
+            grid-column: 2;
+            grid-row: 6;
+        }
+
 
         .main-image {
             grid-column: 1 / span 2;
@@ -68,6 +88,11 @@
             grid-column: 3;
             grid-row: 1 / span 3;
         }
+
+        #obvious {
+            font-size: larger;
+            color: chartreuse;
+        }
     </style>
 </head>
 <!--I challenged myself by embedding the social media things throughout this page.  This was difficult to get working with the CSS Grid.-->
@@ -87,28 +112,27 @@
         <img src="images\Images(Alex)\Dinosaur Twitter Logo.jpg" alt="Front Image" class="main-image grid-item"
             width="750px">
         <h1 class="centered">Get in touch with us Here</h1>
-        <button class="button button1 main-1"><a href="https://twitter.com/dcg_dinosaur"><img
+        <button class="button button1 support-3"><a href="https://twitter.com/dcg_dinosaur"><img
                     src="images\Images(Alex)\OIP.jpg" alt="Twitter" width="30px"></a>Twitter</button>
-        <button class="button button1 main-1"><a href="https://facebook.com/"><img
+        <button class="button button1 support-4"><a href="https://facebook.com/"><img
                     src="images\Images(Alex)\facebook-logo-3.png" alt="Facebook" width="30px"></a>Facebook</button>
-        <h5 class="grid-item main-1">This is a rendering of what one of our most important dinosaurs, Carnotaurus,
+        <img src="images\Images(Alex)\Dinosaur eating a guy.png" alt="Dinosaur Eating a Man" class="grid-item main-1 ">
+        <h5 class="grid-item support-1">This is a rendering of what one of our most important dinosaurs, Carnotaurus,
             will
             be
             like.</h5>
-        <img src="images\Images(Alex)\Dinosaur eating a guy.png" alt="Dinosaur Eating a Man"
-            class="grid-item support-1 ">
-        <p class="grid-item support-2">The Carnotaurus will be a new keystone species and will help revitalise the
+        <p class="grid-item support-1">The Carnotaurus will be a new keystone species and will help revitalise the
             eastern
             parts of the state. With its incredible sense of smell, it may even be trained for rescue work with
             Emergency Services.
         </p>
-        <button class="button button1" onclick="askName()" width="500px">What is Your Name?</button>
-        <p id="askname"></p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/obqfbOUKSFg?start=6"
+        <button class="button button1 support-2" onclick="askName()" width="500px">What is Your Name?</button>
+        <p id="askname" id="obvious"></p>
+        <iframe width="800" height="425" src="https://www.youtube.com/embed/obqfbOUKSFg?start=6"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen class="grid-item support-1"></iframe>
-        <div class=" grid-item content3">
+            allowfullscreen class="grid-item main-15"></iframe>
+        <div class=" grid-item main-2">
             <blockquote class="twitter-tweet ">
                 <p lang="en" dir="ltr">Share your thoughts with us! Do you support the Dinosaur Reclamation Project
                 </p>
@@ -148,8 +172,8 @@
         </div>
     </div>
     <footer>
-        <p>Alex, Darius, Evan, Soren (copyright)<br>
-            <a href="mailto:email@example.com">email@example.com</a>
+        <p>Alex, Darius, Evan, Soren $copy<br>
+            <a href="mailto:email@example.com">astewart@eastsideprep.org</a>
         </p>
     </footer>
     </div>
