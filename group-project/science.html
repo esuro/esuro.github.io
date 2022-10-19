@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scientific Process</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/waj8gfv.css">
     <style>
         /*(My Pages: History, Science) I challenged myself this project by using CSS styles in grids in a way I haven't before. This includes changing image opacities in grids, and adding borders to grids. Also, I tried to help my group as much as possible during this project. I helped Evan trouble shoot some issues in his CSS file, and I helped Alex and Soren with their grids early on. I also put more effort into my grid layout and color choices in order to make my webpages look as nice as possible, and I used Javascript in new ways.*/
         .grid-container {
@@ -77,7 +78,7 @@
             border: 1px solid #ddd;
             border-color: #3D89B3;
             border-width: 6px;
-            padding-left: 20px;
+            padding-left: 10px;
         }
 
         .plan {
@@ -174,12 +175,12 @@
         </div>
         <div class="grid-item poll">
             <h2>Polls:</h2>
-            <button onclick="planPoll()">On a scale from 1 to 10, how would you rate our plan?</button>
+            <button class="button" onclick="planPoll()">On a scale from 1 to 10, how would you rate our plan?</button>
             <p id="pollRating"></p>
             <br>
             <hr>
             <br>
-            <button onclick="dinoPoll()">On a scale from 1 to 10, how interested are you in brining back
+            <button class="button" onclick="dinoPoll()">On a scale from 1 to 10, how interested are you in brining back
                 dinosaurs?</button>
             <p id="dinoPollRating"></p>
             <img src="images/angry.png" id="angryFace">
