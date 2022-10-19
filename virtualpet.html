@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    h1 {
+      font-family: helvetica;
+      color: rgb(20, 37, 51);
+    }
+
+    body {
+      background-image: url('background.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    table {
+      border-collapse: separate;
+      border-radius: 6px;
+
+
+      color: rgb(255, 255, 255);
+      font-family: Helvetica;
+      font-size: 30px;
+    }
+
+    div.absolute {
+      position: absolute;
+      width: 100%;
+      bottom: 50px;
+    }
+
+    .centered {
+      background-color: rgba(48, 85, 119, 0.644);
+      border: solid rgb(46, 106, 146) 3px;
+      border-radius: 6px;
+      font-family: Helvetica;
+      font-weight: bold;
+      font-size: 70px;
+      color: white;
+      position: fixed;
+      width: 50%;
+      text-align: center;
+      top: 40%;
+      left: 50%;
+      padding: 20px;
+      transform: translate(-50%, 0);
+
+    }
+
+    .notification {
+      background-color: rgba(48, 85, 119, 0.644);
+      border: solid rgb(46, 106, 146) 3px;
+      border-radius: 6px;
+      font-family: Helvetica;
+      font-weight: bold;
+      font-size: 30px;
+      color: white;
+      position: fixed;
+      width: 30%;
+      text-align: center;
+      top: 5%;
+      left: 50%;
+      padding: 20px;
+      transform: translate(-50%, 0);
+    }
+
+    .button {
+      background-color: rgba(40, 70, 99, 0.836);
+      border: none;
+      border-radius: 5px;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: Helvetica;
+      margin: 2px 2px;
+      transition-duration: 0.3s;
+      cursor: pointer;
+    }
+
+    .button1 {
+      background-color: rgba(40, 70, 99, 0.836);
+      width: 135px;
+      color: rgb(255, 255, 255);
+      border: 2px solid #60996200;
+    }
+
+    .button1:hover {
+      background-color: rgba(26, 45, 63, 0.836);
+      color: white;
+    }
+
+    .button2 {
+      background-color: rgba(40, 70, 99, 0.836);
+      width: 135px;
+      color: rgb(255, 255, 255);
+      border: 2px solid #60996200;
+    }
+
+    .button2:hover {
+      background-color: rgba(243, 179, 4, 0.836);
+      color: rgb(255, 255, 255);
+    }
+
+    .button3 {
+      background-color: rgba(40, 70, 99, 0.836);
+      width: 300px;
+      color: rgb(255, 255, 255);
+      border: 2px solid #60996200;
+    }
+
+    .button3:hover {
+      background-color: rgba(77, 167, 50, 0.836);
+      color: white;
+    }
+
+    .button4 {
+      background-color: rgba(40, 70, 99, 0.836);
+      width: 125px;
+      color: rgb(255, 255, 255);
+      border: 2px solid #60996200;
+    }
+
+    .button4:hover {
+      background-color: rgba(170, 49, 49, 0.836);
+      color: white;
+    }
+
+    .divpause {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+
+<body style="text-align: center; vertical-align:text-bottom;">
+
+  <h1 align="left">Your Virtual Spinosaurus!</h1>
+
+  <div class="divpause">
+    <button class="button button4" type="button" id="b_pause" onclick="f_pause()" width="100px">Pause</button>
+    <button class="button button4" onClick="window.location.reload();">Restart</button>
+  </div>
+
+  <div class="centered" style="display:none" id="endText">
+    Your Spinosaurus Died!
+    <span id="lifespanAge"></span>
+  </div>
+
+  <div class="notification" style="display:none" id="viewLifespan">
+    <span id="viewSpanLifespan"></span>
+  </div>
+
+  <table style="background-color: rgba(48, 85, 119, 0.644); border:solid rgb(46, 106, 146) 3px; width: 450px;">
+    <tr height="50px">
+      <th align="left">Hunger : </th>
+      <th align="left"><meter id="m_hunger" min="0" max="100" high="50" low="30" optimum="100" value="100"></meter></th>
+      <th align="right"><button class="button button1" type="button" onclick="f_Feed()">Feed</button></th>
+    </tr>
+
+    <tr height="50px">
+      <th align="left">Mood : </th>
+      <th align="left"><meter id="m_mood" min="0" max="100" high="66" low="33" optimum="100" value="100"></meter></th>
+      <th align="right"><button class="button button1" type="button" onclick="f_Entertain()">Entertain</button></th>
+    </tr>
+
+    <tr height="50px">
+      <th align="left">Thirst : </th>
+      <th align="left"><meter id="m_thirst" min="0" max="100" high="60" low="40" optimum="100" value="100"><meter></th>
+      <th align="right"><button class="button button1" type="button" onclick="f_Thirst()">Give Water</button></th>
+    </tr>
+
+    <tr height="50px">
+      <th align="left"><button class="button button2" type="button" id="b_revive" onclick="f_Revive()"
+          width="100%">Revive</button></th>
+      <th align="center" colspan="2"><button class="button button3" type="button" id="b_revive" onclick="f_Lifespan()"
+          width="100%">View
+          Lifespan</button></th>
+
+    </tr>
+  </table>
+
+  <br>
+
+  <table style="background-color: rgba(48, 85, 119, 0.644); border:solid rgb(46, 106, 146) 3px; width: 200px;">
+    <tr height="50px">
+      <th align="left">Hunger: <span id='hungerspan'>100</span></th>
+    </tr>
+    <tr height="50px">
+      <th align="left">Thirst: <span id='thirstspan'>100</span></th>
+
+    </tr>
+
+
+
+
+
+
+
+    <div class="absolute">
+      <img src="spino.png" id="spino" alt="Spinosaurus Pet" width="231" height="107">
+      <img src="deadspino2-01-01.png" id="deadspino" alt="spino carcass" width="213" height="107" style="display:none;">
+      <img src="angry spino.png" id="angryspino" alt="Spinosaurus Roar" width="231" height="107" style="display:none">
+      <img src="goat.png" id="goat" alt="goat food" width="100" height="107" style="display:none;">
+      <img src="thirstyspino-01-01.png" id="thirstyspino" alt="spinothirst" width="231" height="107"
+        style="display:none">
+      <img src="spinoroar-01.png" id="spinoroar" alt="roaring spino" width="231" height="107" style="display:none">
+      <div class="youdied">
+        <img src="youdied.jpg" id="youdied" alt="death screen" width="1920" height="1080" style="display:none;">
+      </div>
+    </div>
+
+
+
+    <script src="virtualpet.js">
+
+    </script>
+
+
+
+</body>
+
+</html>
