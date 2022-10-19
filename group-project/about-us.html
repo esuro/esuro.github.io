@@ -1,5 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
+<!-- CHALLENGE PARAGRAPH:
+
+    I think that I definitely challenged myself with this project in a couple of different ways. One way I challenged myself was with the javascript functions and buttons. I wasn't super familiar with this, so it took me a while to figure out how to make the javascript functions work with the buttons. Additionally, the CSS grid was another challenge for me. I had struggled with it before and I didn't do super great on the CSS grid classwork assignment either. This was one of the biggest challenges for me since it took up a lot of time, and I didn't understand it well. CSS grid was also super essential for all of the pages, so it was crucial that I designed the grid correctly. So I spent time learning and reading about it and then implementing the grid into my own code, and fortunately now it works. 
+
+-->
 
 <head>
     <meta charset="UTF-8">
@@ -7,38 +14,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/waj8gfv.css">
 
     <style>
         .grid-container {
             display: grid;
-            grid-gap: 10px;
-            grid-template-columns: auto auto auto auto 25%;
-            grid-template-rows: auto auto auto auto auto auto auto 25%;
+            gap: 10px;
+            grid-template-columns: 42.5% 42.5% auto;
         }
         
-        .grid-item {
-            background-color: lightblue;
-            text-align: center;
-            font-size: 30px;
-            padding: 20px;
-        }
-        
-        .sidebar {
-            grid-column: 5;
-            grid-row: 1 span 8;
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         
         .main-image {
-            grid-column: 1/ span 4;
+            grid-column: 1 / span 2;
             grid-row: 1;
+            width: 122%;
+            height: 105%;
+            margin-left: -225px;
+            margin-top: -10px;
+            /*NEW FEATURE*/
+            opacity: 0.2;
+            /*NEW FEATURE*/
+        }
+        
+        .sidebar {
+            grid-column: 3;
+            grid-row: 1 / span 3;
+        }
+        
+        .grid-item {
+            background-color: lightgrey;
+            font-size: 30px;
+            padding: 10px;
+        }
+        
+        .header {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            position: relative;
+            text-align: center;
+            color: #3D89B3;
+        }
+        
+        .title {
+            font-size: 20px;
+            grid-column: 1 / span 2;
+            grid-row: 2;
+            text-align: center;
+            height: 70%;
+            color: #3D89B3;
+        }
+        
+        .content1 {
+            font-size: 20px;
+            grid-column: 1;
+            grid-row: 3;
+        }
+        
+        .content2 {
+            font-size: 20px;
+            grid-column: 2;
+            grid-row: 3;
+        }
+        
+        .title2 {
+            font-size: 20px;
+            grid-column: 1 / span 2;
+            grid-row: 4;
+            text-align: center;
+            height: 70%;
+            color: #3D89B3;
+        }
+        
+        .content3 {
+            grid-column: 1;
+        }
+        
+        .content4 {
+            grid-column: 2;
+        }
+        
+        .customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        .customers td,
+        .customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            /*NEW FEATURE*/
+            border-color: #3D89B3;
+            border-width: 2px;
+            /*NEW FEATURE*/
+        }
+        
+        .customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
         }
     </style>
 </head>
 
 <body>
     <div class="grid-container">
-
-        <!--SIDEBAR-->
         <div class="sidebar">
             <a class="active" href="index.html">Home</a>
             <a href="about-us.html">About Us</a>
@@ -47,24 +135,65 @@
             <a href="science.html">Science</a>
             <a href="world-peace.html">World Peace</a>
             <a href="history.html">History</a>
-        </div>
-
-        <!--MAIN IMAGE-->
-        <div class="grid-item main-image">
-            <img src="images/about_us_dinosaur.jpg" alt="Dinosaur" height="50%">
-        </div>
-
-
-
-        <div style="padding-left: 220px;">
-            <h1>About Us</h1>
-            <h2>An innovate company looking to REVIVE dinosaurs</h2>
 
         </div>
+        <div style="padding-left: 220px;" class="grid-item header">
+            <img src="images/about_us_dinosaur.jpg" class="main-image" alt="dinosaur" width="50%">
+            <h1 class="centered">About us</h1>
+        </div>
+        <div class="title ">
+            <h2>AN INNOVATIVE INDUSTRY OF DINOSAURS</h2>
+        </div>
+        <div class="content1 ">
+            <p>Studying dinosaurs has played a key role in developing evolutionary theory and other scientific concepts, such as plate tectonics and biogeography. All of these pursuits arise as a result of humanity's innate curiosity to investigate how our
+                world works and where we fit within the natural world we see around us. Because of this, our company had the innovative idea to bring back dinosaurs into our modern world today. We belive this is the next step for the progression of humanity.</p>
+        </div>
+        <div class="content2 ">
+            <p>Our team was formed at Oxford University, where a group of average college student came together through their love for dinosaurs. After they became friends, they realized that they all shared the same perspectives on how dinosaurs were the
+                answer to our world-wide problems. So, they started a company to bring dinosaurs back to life. </p>
+        </div>
+
+        <div class="title2 ">
+            <h2>MEET THE TEAM</h2>
+        </div>
+
+        <div class="table content3">
+            <table class="customers ">
+
+                <tr>
+                    <td><img src="images/soren.jpg" alt="soren picture" width="50%" height="50%"></td>
+                    <td>Chief Executive Officer</td>
+                    <td>Soren ghorai</td>
+                </tr>
+                <tr>
+                    <td><img src="images/evan.jpg" alt="evan picture" width="60%" height="110%"></td>
+                    <td>Director of programs</td>
+                    <td>Evan suroteguh</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="table content4">
+            <table class="customers ">
+                <tr>
+                    <td><img src="images/darius.jpg" alt="darius picture"></td>
+                    <td>Chief Financial Officer</td>
+                    <td>Darius Partovi</td>
+                </tr>
+                <tr>
+                    <td><img src="images/alex.jpg" alt="alex picture"></td>
+                    <td>Social Media Officer</td>
+                    <td>Alex Stewart</td>
+                </tr>
+
+            </table>
+        </div>
+
+
     </div>
     <footer>
-        <p>Alex, Darius, Evan, Soren (copyright)<br>
-            <a href="mailto:email@example.com">email@example.com</a>
+        <p>Alex, Darius, Evan, Soren &copy <a href="mailto:sghorai@eastsideprep.org ">dinogroup@aol.org</a>
         </p>
     </footer>
 

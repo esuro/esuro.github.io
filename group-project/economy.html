@@ -6,9 +6,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Economic Benefits</title>
+    <link rel="stylesheet" href="css/style.css" class="padding-left:200px;">
+    <style>
+        .grid-container {
+            display: grid;
+            gap: 50px 100px;
+            text-align: center;
+            grid-template-columns: auto auto auto;
+        }
+
+        .grid-item {
+            background-color: antiquewhite;
+            text-align: center;
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        .navmenu {
+            grid-column: 1 / span 3;
+            grid-row: 1;
+        }
+
+        .main-image {
+            grid-column: 1 / span 3;
+            grid-row: 0 / span 2;
+        }
+
+        .main-1 {
+            grid-column: 1 / span 2;
+            grid-row: 3;
+        }
+
+        .support-1 {
+            background-color: blanchedalmond;
+            grid-column: 1;
+            grid-row: 4;
+        }
+
+        .support-2 {
+            background-color: blanchedalmond;
+            grid-column: 2;
+            grid-row: 4;
+        }
+
+        .main-2 {
+            grid-column: 1 / span 2;
+            grid-row: 5;
+        }
+
+        .sidenav {
+            grid-column: 3;
+            grid-row: 3 / span 1;
+            background-color: azure;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            background-color: bisque;
+        }
+
+        .lightcolor {
+            background-color: rgb(137, 255, 255);
+            text-align: center;
+        }
+
+        .dinobackground {
+            background-image: "Images(Alex)/Dinosaur Twitter Logo.jpg";
+        }
+
+        .bigtext {
+            font-style: italic;
+            font-size: 20px;
+            text-emphasis-color: blue;
+        }
+
+        .fancy {
+            font-size: 18px;
+        }
+
+        .main-image {
+            grid-column: 1 / span 4;
+            grid-row: 1;
+            width: 488%;
+            height: 420%;
+            margin-left: -225px;
+            margin-top: -10px;
+            /*NEW FEATURE*/
+            opacity: 0.5;
+            /*NEW FEATURE*/
+        }
+    </style>
 </head>
 
-<body>
+<body background="Images(Alex)\background.jpg">
     <div class="sidebar">
         <a class="active" href="index.html">Home</a>
         <a href="about-us.html">About Us</a>
@@ -17,18 +111,50 @@
         <a href="science.html">Science</a>
         <a href="world-peace.html">World Peace</a>
         <a href="history.html">History</a>
-
     </div>
-    <div style="padding-left: 220px;">
-        <h1>Economic Benefits</h1>
-        <h2>Our Project will create the following benefits</h2>
-        <p>This is where a list of benefits will be </p>
+    <div style="padding-right: 220px; padding-bottom: 200px;">
+        <div class="lightcolor">
+            <img src="Images(Alex)\dinogif.gif" alt="gifofdino" width="1500px">
+            <h1>Economic Benefits</h1>
+            <h2>Our Project will create:</h2>
+            <ul class="bigtext">
+                <li>Over 60,000 New Jobs as Dinosaur Ranchers and Scientists</li>
+                <li>At Least $400 milion dollars in increased investment into the State of Washington</li>
+                <li>Increased Biodiversity in the Olympic Peninsula</li>
+            </ul>
+            <hr>
+            <h2>The Future and You!</h2>
+            <!--NOBODY TOUCH THE BUTTON, IT HAS BROKEN SO MUCH AND IT TOOK 45 MINUTES TO TROUBLESHOOT-->
+            <img src="Images(Alex)\seattle.jpg" alt="Seattle" id="seattle" width="1000px">
+            <hr>
+            <button onclick="document.getElementById ('seattle').src='Images(Alex)/seattle.jpg'">This is Today,
+                before the Dinosaur Reclamation Project</button>
+            <button onclick="document.getElementById ('seattle').src='Images(Alex)/utopia.jpg'">This is the World Of
+                Tommorow with Dinosaurs!</button>
+            <hr>
+            <button onclick="askDino()">What is Your Favorite Dinosaur?</button>
+            <p id="askdino"></p>
+            <img src="Images(Alex)\stonks.jpg" alt="Money" width="800">
+            <p class="fancy">This is the projected economic output of the Dinosaur Reclamation Project</p>
+        </div>
     </div>
     <footer>
         <p>Alex, Darius, Evan, Soren (copyright)<br>
             <a href="mailto:email@example.com">email@example.com</a>
         </p>
     </footer>
+    <script>
+        function askDino() {
+            let nameParagraph = document.getElementById('askdino');
+            let name = prompt("What is Your Favorite Dinosaur?")
+            // decide what to do
+            if (name === "Trex") {
+                nameParagraph.innerHTML = "Daring today, arent we.";
+            } else {
+                nameParagraph.innerHTML = "Thats great, " + name + " is an awesome Dinosaur."
+            }
+        }
+    </script>
 </body>
 
 </html>
