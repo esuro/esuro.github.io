@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVAN S' Truth and Lie Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yec0ojh.css">
+</head>
+
+<body>
+    <h1> evan's truth and a lie game</h1>
+    <p id="greet" style="font-size: x-large">Welcome!</p>
+    <h2>introduction</h2>
+    <form action="" id="name-form">
+        <label for="fname">First Name:</label>
+        <input type="text" name="greet" id="fname">
+        <br>
+        <label for="lname">Last Name:</label>
+        <input type="text" name="greet" id="lname">
+        <br>
+        <label for="age">Age:</label>
+        <input type="text" name="greet" id="age">
+
+    </form>
+    <br>
+    <input class="submitbutton" type="button" value="SUBMIT" onclick="greet();">
+    <hr>
+    <h2>trivia question</h2>
+    <p>who won the 2022 formula 1 world championship?</p>
+    <p id="trivia-answer"></p>
+    <form action="">
+        <input type="radio" name="greet" id="max">
+        <label for="max">Max Verstappen</label>
+        <br>
+        <input type="radio" name="greet" id="lewis">
+        <label for="lewis">Lewis Hamilton</label>
+        <br>
+        <input type="radio" name="greet" id="charles">
+        <label for="charles">Charles Leclerc</label>
+    </form>
+    <br>
+    <input type="button" value="SUBMIT" onclick="trivia();">
+
+    <hr>
+    <h2>2 truths 1 lie</h2>
+    <p>which one is the lie?</p>
+    <p id="truth-answer"></p>
+    <form action="">
+        <input type="radio" name="greet" id="soccer">
+        <label for="soccer">I've played soccer longer than tennis</label>
+        <br>
+        <input type="radio" name="greet" id="yearbook">
+        <label for="yearbook">I designed last years yearbook</label>
+        <br>
+        <input type="radio" name="greet" id="spiritpoints">
+        <label for="spiritpoints">Spirit Points are dumb</label>
+    </form>
+    <br>
+    <input type="button" value="SUBMIT" onclick="truth();">
+
+
+    <script src="js/game.js"></script>
+</body>
+
+</html>
