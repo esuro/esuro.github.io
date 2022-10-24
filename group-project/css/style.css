@@ -24,12 +24,7 @@
     text-decoration: none;
 }
 
-.sidebar a.active {
-    background-color: #ffffff00;
-    color: rgb(0, 128, 255);
-}
-
-.sidebar a:hover:not(.active) {
+.sidebar a:hover {
     background-color: rgba(15, 124, 191, 0);
     color: rgb(119, 119, 119);
 }
@@ -40,11 +35,9 @@
         height: auto;
         position: right;
     }
-
     .sidebar a {
         float: right;
     }
-
     div.content {
         margin-right: 0;
     }
@@ -89,7 +82,6 @@ h5,
 h6,
 p {
     size: 25px;
-
     font-family: depot-new-web, sans-serif;
     font-weight: 300;
     font-style: normal;
@@ -121,7 +113,6 @@ button {
 .button1 {
     background-color: rgb(121, 121, 121);
     color: black;
-
 }
 
 .button1:hover {
