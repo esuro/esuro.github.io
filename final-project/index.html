@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/whv2kxf.css">
+    <style>
+        body {
+            background-color: rgb(243, 236, 225);
+            background-image: url('https://cdn.discordapp.com/attachments/564972716814368768/1039777220920614932/background2.jpg');
+            width: 100%;
+        }
+
+        #background-image {
+            border: 2px solid black;
+            padding: 25px;
+            background: url('https://cdn.discordapp.com/attachments/564972716814368768/1039777220920614932/background2.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .grid-container1 {
+            display: grid;
+            gap: 0px;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-row: 100%;
+        }
+
+        .grid-item1 {
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 30px;
+            font-family: dovetail-mvb, serif;
+            font-weight: 700;
+            font-style: normal;
+
+        }
+
+        .grid-item2 {
+            background-color: rgb(243, 240, 229);
+            font-size: 30px;
+            font-family: dovetail-mvb, serif;
+            font-weight: 700;
+            font-style: normal;
+            padding: 30px;
+
+        }
+
+        .grid-container2 {
+            display: grid;
+            gap: 0px;
+            grid-template-columns: 50% 50%;
+        }
+
+        .background-image {
+            width: 100%;
+            height: 100%;
+        }
+
+        .left-head {
+            list-style: none;
+            margin: 0;
+            padding: 10%;
+            text-align: center;
+            grid-column: 1/ span 2;
+            grid-row: 1;
+
+
+
+        }
+
+        .right-head {
+            list-style: none;
+            margin: 0;
+            padding: 10%;
+            text-align: center;
+            grid-column: 4/ span 2;
+            grid-row: 1;
+
+        }
+
+        .logo {
+            grid-column: 3;
+            grid-row: 1;
+            text-align: center;
+        }
+
+        .about-us {
+            background-color: beige;
+            font-family: dovetail-mvb, serif;
+            font-weight: 400;
+            font-style: normal;
+            grid-column: 1;
+            grid-row: 1;
+
+        }
+
+        .content {
+            background-color: beige;
+            font-family: dovetail-mvb, serif;
+            font-weight: 400;
+            font-style: normal;
+            grid-column: 2;
+            grid-row: 1;
+            height: 100%;
+            padding: 0px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="grid-container1">
+        <div class="grid-item1 left-head">
+            <ul>
+                <li><a class="active" href="#home">Menu</a></li>
+                <li><a href="#news">Contact Us</a></li>
+                <li><a href="#contact">Sponsors</a></li>
+            </ul>
+        </div>
+
+        <div class="grid-item1 right-head">
+            <ul>
+                <li><a class="active" href="#home">History</a></li>
+                <li><a href="#news">Photos</a></li>
+                <li><a href="#contact">Flyer</a></li>
+            </ul>
+        </div>
+
+        <div class="grid-item1 logo">
+            <img src="images/logo.png" width="auto" height="100%">
+        </div>
+
+
+    </div>
+    <div class="grid-container2">
+        <div class="grid-item2 about-us">
+            <h2>About Us</h2>
+            <p>The first drive-in restaurant in the Pacific Northwest was established in 1930 in Renton by A.H.
+                Rutherford. The combination of Triple XXX Root Beer and food turned out to be a great idea which spread
+                nationwide. Of all the XXXs that ever graced our country's landscape, Issaquah's is the only one left
+                which sports the traditional barrel. Another Triple XXX still thrives in Lafayette, Indiana.</p>
+        </div>
+        <div class="grid-item2 content">
+
+            <iframe width="800" height="500" src="https://www.youtube.com/embed/-rrtG8i-13w"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+</body>
+
+</html>
