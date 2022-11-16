@@ -25,7 +25,7 @@
             display: grid;
             gap: 0px;
             grid-template-columns: 20% 20% 20% 20% 20%;
-            grid-template-rows: 225px 775px;
+            grid-template-rows: 225px 200px;
         }
 
         .grid-item1 {
@@ -37,20 +37,7 @@
 
         }
 
-        .grid-item2 {
-            font-size: 25px;
-            font-family: dovetail-mvb, serif;
-            font-weight: 700;
-            font-style: normal;
-            padding: 30px;
 
-        }
-
-        .grid-container2 {
-            display: grid;
-            gap: 0px;
-            grid-template-columns: 50% 50%;
-        }
 
         .background-image {
             width: 100%;
@@ -80,11 +67,20 @@
 
         }
 
-        .welcome {
-
-            background-color: rgba(255, 0, 0, 0);
+        .flyer {
+            background-color: rgb(240, 115, 38);
             grid-column: 1/ span 5;
             grid-row: 2;
+            text-align: center;
+            margin-top: 0;
+            font-size: 50px;
+            color: rgb(255, 255, 255)
+        }
+
+        .flyerimg {
+            background-color: rgb(240, 115, 38);
+            grid-column: 1/ span 5;
+            grid-row: 3;
             text-align: center;
             font-size: 100px;
             color: white
@@ -94,30 +90,6 @@
             grid-column: 3;
             grid-row: 1;
             text-align: center;
-        }
-
-        .about-us {
-            background-color: rgb(241, 238, 227);
-            font-family: dovetail-mvb, serif;
-            font-weight: 400;
-            font-style: normal;
-            grid-column: 1;
-            grid-row: 1;
-            padding: 100px;
-            color: rgb(108, 99, 74);
-
-        }
-
-        .content {
-            background-color: rgb(241, 238, 227);
-            font-family: dovetail-mvb, serif;
-            font-weight: 400;
-            font-style: normal;
-            grid-column: 2;
-            grid-row: 1;
-            height: auto;
-            padding: 50px;
-
         }
     </style>
 
@@ -143,29 +115,21 @@
         </div>
 
         <div class="grid-item1 logo">
-            <img src="images/logo.png" width="70%" height="auto">
+            <a href="index.html">
+                <img src="images/logo.png" width="70%" height="auto">
+            </a>
         </div>
-        <div class="grid-item1 welcome">
-            <h1>Welcome</h1>
+        <div class="grid-item1 flyer">
+            <h2>Flyer</h2>
         </div>
 
     </div>
-    <div class="grid-container2">
-        <div class="grid-item2 about-us">
-            <h2 style="color:rgb(68, 64, 50);">About Us</h2>
-            <p>The first drive-in restaurant in the Pacific Northwest was established in 1930 in Renton by A.H.
-                Rutherford. The combination of Triple XXX Root Beer and food turned out to be a great idea which spread
-                nationwide. Of all the XXXs that ever graced our country's landscape, Issaquah's is the only one left
-                which sports the traditional barrel. Another Triple XXX still thrives in Lafayette, Indiana.</p>
-        </div>
-        <div class="grid-item2 content">
 
-            <iframe width="650px" height="450px" src="https://www.youtube.com/embed/-rrtG8i-13w"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
+    <div class="grid-item1 flyerimg">
+        <img src="images/flyer.jpg" width="90%" height="auto">
     </div>
+
+
     <footer>
         <p>© Triple XXX Rootbeer Drive-In || Address: <a href="https://goo.gl/maps/hWW93cWRpyzMe4LPA">98 N.E.
                 Gilman Blvd., Issaquah WA 98027</a> || All Rights Reserved || Tel.

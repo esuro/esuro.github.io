@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/whv2kxf.css">
+    <style>
+        body {
+            background-color: rgba(243, 236, 225, 0);
+            background-image: url('https://cdn.discordapp.com/attachments/564972716814368768/1039777220920614932/background2.jpg');
+            /*background-position-x: 50%;
+            background-position-y: 50%;*/
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+
+        .grid-container1 {
+            display: grid;
+            gap: 0px;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-template-rows: 225px 200px 770px 900px;
+        }
+
+        .grid-item1 {
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 20px;
+            font-family: dovetail-mvb, serif;
+            font-weight: 700;
+            font-style: normal;
+
+        }
+
+
+
+        .background-image {
+            width: 100%;
+            height: 100%;
+        }
+
+        .left-head {
+            list-style: none;
+            margin: 0;
+            padding: 10%;
+            text-align: center;
+            grid-column: 1/ span 2;
+            grid-row: 1;
+            font-size: 15px;
+
+
+        }
+
+        .right-head {
+            list-style: none;
+            margin: 0;
+            padding: 10%;
+            text-align: center;
+            grid-column: 4/ span 2;
+            grid-row: 1;
+            font-size: 15px;
+
+        }
+
+        .gallerytext {
+            background-color: rgb(0, 0, 0);
+            grid-column: 1/ span 5;
+            grid-row: 2;
+            text-align: center;
+            margin-top: 0;
+            font-size: 50px;
+            color: rgb(255, 255, 255)
+        }
+
+        .gallery {
+            background-color: rgb(242, 239, 230);
+            grid-column: 1/ span 5;
+            grid-row: 3;
+            text-align: center;
+            font-size: 100px;
+            color: rgb(0, 0, 0)
+        }
+
+        .logo {
+            grid-column: 3;
+            grid-row: 1;
+            text-align: center;
+        }
+
+        h6,
+        p {
+            color: rgb(255, 255, 255);
+            font-family: dovetail-mvb, serif;
+            font-weight: 400;
+            font-style: normal;
+
+        }
+
+        .c-heroImageGrid {
+            position: relative;
+            overflow: hidden;
+            height: 50vw;
+            background: rgb(0, 0, 0);
+            margin-bottom: 60px;
+        }
+
+        .c-heroImageGrid .container {
+            display: flex;
+            align-items: flex-end;
+            position: absolute;
+            top: -20vw;
+            left: -8vw;
+            transform: rotateZ(45deg);
+            height: 100vw;
+            width: 107vw;
+        }
+
+        .c-heroImageGrid .container .column {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .c-heroImageGrid .container .column:nth-of-type(1) {
+            border-right: 8px solid rgb(0, 0, 0);
+            width: 25%;
+            height: 66vw;
+        }
+
+
+        .c-heroImageGrid .container .column:nth-of-type(1):before {
+            position: absolute;
+            top: 8.4vw;
+            left: 8.1vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: rotateZ(-45deg);
+            content: "";
+            width: 37vw;
+            height: 38vw;
+            background-image: url(https://cdn.discordapp.com/attachments/564972716814368768/1042179974121144400/vette.jpg);
+        }
+
+
+        .c-heroImageGrid .container .column:nth-of-type(2) {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 75%;
+            height: 109.1vw;
+        }
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row {
+            border-top: 8px solid rgb(0, 0, 0);
+        }
+
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(1) {
+            position: relative;
+            overflow: hidden;
+            height: 50vw;
+        }
+
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(1):before {
+            position: absolute;
+            top: -10.1vw;
+            left: -14.3vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: rotateZ(-45deg);
+            content: "";
+            width: 65vw;
+            height: 39vw;
+            background-image: url(https://cdn.discordapp.com/attachments/564972716814368768/1042181545470992456/919street03.jpg);
+        }
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) {
+            display: flex;
+            height: 40.5vw;
+        }
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(3) {
+            border-top: none;
+        }
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(1) {
+            overflow: hidden;
+            width: 30%;
+            background-color: #000000;
+        }
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(1) .text {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            transform: rotateZ(-45deg);
+            position: relative;
+        }
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(1) .text h6 {
+            position: absolute;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.35vw;
+            width: 20vw;
+            top: 16vw;
+            left: 7vw;
+            line-height: 1.55vw;
+        }
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(1) .text p {
+            text-align: right;
+            position: absolute;
+            color: rgb(255, 255, 255);
+            font-size: 0.9vw;
+            width: 18vw;
+            top: 23.5vw;
+            left: -3.5vw;
+        }
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(2) {
+            position: relative;
+            width: 70%;
+            border-left: 8px solid rgb(0, 0, 0);
+            overflow: hidden;
+        }
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(2):before {
+            position: absolute;
+            top: 0;
+            left: -40vw;
+            width: 110.1vw;
+            height: 110vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: rotateZ(-45deg);
+            content: "";
+            background-image: url(https://cdn.discordapp.com/attachments/564972716814368768/1042182064356741241/107382051-pattern-burger-line-vector.webp   );
+        }
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(3) {
+            position: relative;
+            height: 18.6vw;
+            overflow: hidden;
+        }
+
+        .c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(3):before {
+            position: absolute;
+            top: 7.5vw;
+            left: 25vw;
+            width: 33vw;
+            height: 27vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: rotateZ(-45deg);
+            content: "";
+            background-image: url(https://cdn.discordapp.com/attachments/564972716814368768/1042180118103207986/bmw.jpg);
+        }
+
+        .jsform {
+            background-color: rgb(27, 31, 48);
+            grid-column: 1/ span 5;
+            grid-row: 4;
+            color: white;
+            padding: 100px;
+            font-family: dovetail-mvb, serif;
+            font-weight: 700;
+            font-style: normal;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="grid-container1">
+        <div class="grid-item1 left-head">
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+            </ul>
+        </div>
+
+        <div class="grid-item1 right-head">
+            <ul>
+                <li><a href="history.html">History</a></li>
+                <li><a href="photos.html">Photos</a></li>
+                <li><a href="flyer.html">Flyer</a></li>
+            </ul>
+        </div>
+
+        <div class="grid-item1 logo">
+            <a href="index.html">
+                <img src="images/logo.png" width="70%" height="auto">
+            </a>
+        </div>
+        <div class="grid-item1 gallerytext">
+            <h2>Gallery</h2>
+        </div>
+
+
+        <div class="grid-item1 gallery">
+            <div class="c-heroImageGrid">
+                <div class="container">
+                    <div class="column"></div>
+                    <div class="column">
+                        <div class="row"></div>
+                        <div class="row">
+                            <div>
+                                <div class="text">
+                                    <h6 style="font-size: 25px; text-align: left;">
+                                        Check out some of our cars!
+                                    </h6>
+                                    <p style="font-size: 20px; text-align: center;">
+                                        We've got all kinds of car shows, from European cars, to Japanese cars, and
+                                        American Cars!
+                                    </p>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class=" row">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jsform">
+            <div class="grid-container">
+                <h1>Create your Dream Car!</h1>
+
+                <div class="intro">
+                    <form action="">
+                        <label for="fname">First Name:</label>
+                        <input type="text" name="greet" id="fname">
+                        <br>
+
+                        <label for="lname">Last Name:</label>
+                        <input type="text" name="greet" id="lname">
+                        <br>
+
+                        <label for="age">Age:</label>
+                        <input type="text" name="greet" id="age">
+                        <br>
+
+                    </form>
+                </div>
+                <br>
+                <input type="button" value="SUBMIT" onclick="truthAndLie();">
+                <p id="truth-answer"></p>
+            </div>
+            <h2>Manufacturer Region</h2>
+
+            <form action="">
+                <input type="radio" name="Country" id="German">
+                <label for="German">German</label>
+                <br>
+                <input type="radio" name="Country" id="Japanese">
+                <label for="Japanese">Japanese</label>
+                <br>
+                <input type="radio" name="Country" id="American">
+                <label for="American">American</label>
+                <br>
+                <input type="radio" name="Country" id="British">
+                <label for="British">British</label>
+                <br>
+
+                <br>
+                <h2>Engines</h2>
+                <input type="radio" name="Engine" id="Inline 6">
+                <label for="Inline 6">Inline 6</label>
+                <br>
+                <input type="radio" name="Engine" id="Inline 5">
+                <label for="Inline 5">Inline 5</label>
+                <br>
+                <input type="radio" name="Engine" id="Inline 4">
+                <label for="Inline 4">Inline 4</label>
+                <br>
+                <input type="radio" name="Engine" id="V6">
+                <label for="V6">V6</label>
+                <br>
+                <input type="radio" name="Engine" id="V8">
+                <label for="V8">V8</label>
+                <br>
+                <input type="radio" name="Engine" id="V10">
+                <label for="V10">V10</label>
+                <br>
+                <input type="radio" name="Engine" id="V12">
+                <label for="V12">V12</label>
+                <br>
+                <br>
+                <input type="button" value="SUBMIT" onclick="truthAndLie1();">
+                <p id="truth-answer1"></p>
+            </form>
+            <script src=" js/order.js "></script>
+        </div>
+
+    </div>
+    </div>
+    <footer>
+        <p>© Triple XXX Rootbeer Drive-In || Address: <a href="https://goo.gl/maps/hWW93cWRpyzMe4LPA">98 N.E.
+                Gilman Blvd., Issaquah WA 98027</a> || All Rights Reserved || Tel.
+        </p>
+    </footer>
+
+</body>
+
+</html>
