@@ -25,7 +25,7 @@ function truthAndLie1() {
 
     // get paragraph
     let truthAnswer1 = document.getElementById("truth-answer1");
-    let dreamCar = "Thanks " + fname + "! <br> Your Car Manufacturer Region: ";
+    let dreamCar = "Thanks " + fname + "! <br> Your dream car is from  ";
 
     //get the checked values from the form
     //cars
@@ -45,40 +45,40 @@ function truthAndLie1() {
 
     //appetizer
     if (germanSelected) {
-        dreamCar = dreamCar + "German  <br> Your Engine:";
+        dreamCar = dreamCar + "Germany with ";
     }
     if (japaneseSelected) {
-        dreamCar = dreamCar + "Japanese <br> Your Engine:";
+        dreamCar = dreamCar + "Japan with ";
     }
     if (americanSelected) {
-        dreamCar = dreamCar + "American <br> Your Engine:";
+        dreamCar = dreamCar + "America with ";
     }
     if (britishSelected) {
-        dreamCar = dreamCar + "British <br> Your Engine:";
+        dreamCar = dreamCar + "Britain with ";
     }
 
 
     //meat and seafood
     if (inline6Selected) {
-        dreamCar = dreamCar + " Inline 6";
+        dreamCar = dreamCar + "an Inline 6 engine!";
     }
     if (inline5Selected) {
-        dreamCar = dreamCar + " Inline 5";
+        dreamCar = dreamCar + "an Inline 5 engine!";
     }
     if (inline4Selected) {
-        dreamCar = dreamCar + " Inline 4";
+        dreamCar = dreamCar + "an Inline 4 engine!";
     }
     if (v6Selected) {
-        dreamCar = dreamCar + " V6";
+        dreamCar = dreamCar + "a V6 engine!";
     }
     if (v8Selected) {
-        dreamCar = dreamCar + " V8";
+        dreamCar = dreamCar + "a V8 engine!";
     }
     if (v10Selected) {
-        dreamCar = dreamCar + " V10 ";
+        dreamCar = dreamCar + "a V10 engine!";
     }
     if (v12Selected) {
-        dreamCar = dreamCar + " V12";
+        dreamCar = dreamCar + "a V12 engine!";
     }
 
     //print

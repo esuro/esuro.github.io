@@ -24,7 +24,7 @@
             display: grid;
             gap: 0px;
             grid-template-columns: 20% 20% 20% 20% 20%;
-            grid-template-rows: 225px 200px 770px 900px;
+            grid-template-rows: 225px 200px 770px 950px;
         }
 
         .grid-item1 {
@@ -262,15 +262,58 @@
         }
 
         .jsform {
-            background-color: rgb(27, 31, 48);
+            background-color: rgb(23, 22, 21);
             grid-column: 1/ span 5;
             grid-row: 4;
             color: white;
             padding: 100px;
             font-family: dovetail-mvb, serif;
-            font-weight: 700;
+            font-weight: 400;
             font-style: normal;
 
+        }
+
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button3 {
+            background-color: rgba(255, 255, 255, 0);
+            color: rgb(255, 255, 255);
+            border: 2px solid #f44336;
+        }
+
+        .button3:hover {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .button2 {
+            background-color: rgba(255, 255, 255, 0);
+            color: rgb(255, 255, 255);
+            border: 2px solid #3695f4;
+        }
+
+        .button2:hover {
+            background-color: #3695f4;
+            color: white;
+        }
+
+        .bold {
+            font-family: dovetail-mvb, serif;
+            font-weight: 800;
+            font-style: normal;
         }
     </style>
 
@@ -333,7 +376,7 @@
         </div>
         <div class="jsform">
             <div class="grid-container">
-                <h1>Create your Dream Car!</h1>
+                <h1 class="bold" style="color: rgb(80, 156, 228);">Create your Dream Car!</h1>
 
                 <div class="intro">
                     <form action="">
@@ -352,10 +395,10 @@
                     </form>
                 </div>
                 <br>
-                <input type="button" value="SUBMIT" onclick="truthAndLie();">
+                <input class="button button2" type="button" value="SUBMIT" onclick="truthAndLie();">
                 <p id="truth-answer"></p>
             </div>
-            <h2>Manufacturer Region</h2>
+            <h2 class="bold" style="color: rgb(228, 80, 80);">Manufacturer Region</h2>
 
             <form action="">
                 <input type="radio" name="Country" id="German">
@@ -372,7 +415,7 @@
                 <br>
 
                 <br>
-                <h2>Engines</h2>
+                <h2 class="bold" style="color: rgb(228, 80, 80);">Engines</h2>
                 <input type="radio" name="Engine" id="Inline 6">
                 <label for="Inline 6">Inline 6</label>
                 <br>
@@ -395,7 +438,7 @@
                 <label for="V12">V12</label>
                 <br>
                 <br>
-                <input type="button" value="SUBMIT" onclick="truthAndLie1();">
+                <input class="button button3" type="button" value="SUBMIT" onclick="truthAndLie1();">
                 <p id="truth-answer1"></p>
             </form>
             <script src=" js/order.js "></script>
